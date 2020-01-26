@@ -229,10 +229,14 @@ function WP_Times_art_scripts() {
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
-	}
+    }
+
+    // add Mousemove & Mousestop Color functions
+    wp_enqueue_script( 'color-at-move', get_template_directory_uri() . '/inc/assets/js/color-at-move.js', array(), '1.0.0', true );
+    wp_enqueue_script( 'mousestop', get_template_directory_uri() . '/inc/assets/js/mousestop.js', array(), '1.0.0', true );
+
 }
 add_action( 'wp_enqueue_scripts', 'WP_Times_art_scripts' );
-
 
 
 /**
