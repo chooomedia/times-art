@@ -14,15 +14,23 @@
 			</div><!-- .row -->
 		</div><!-- .container -->
 	</div><!-- #content -->
-    <?php get_template_part( 'footer-widget' ); ?>
 	<footer id="colophon" class="site-footer <?php echo WP_Times_art_bg_class(); ?>" role="contentinfo">
 		<div class="container pt-3 pb-3">
-            <div class="site-info">
-                &copy; <?php echo date('Y'); ?> <?php echo '<a href="'.home_url().'">'.get_bloginfo('name').'</a>'; ?>
-                <span class="sep"> | </span>
-                <a class="credits" href="https://afterimagedesigns.com/wp-bootstrap-starter/" target="_blank" title="WordPress Technical Support" alt="Bootstrap WordPress Theme"><?php echo esc_html__('Bootstrap WordPress Theme','wp-bootstrap-starter'); ?></a>
 
-            </div><!-- close .site-info -->
+            <div class="offset-md-3 col-md-6 text-center">
+				<div class="container">
+				<div class="footer-cta col-4">
+					<a title="Get in Touch" href="http://times-art.chooomedia.de/get-in-touch/">Get in Touch</a>
+				</div>
+					<nav class="footer-nav">
+						<?php get_template_part( 'footer-widget' ); ?>
+					</nav>
+				</div>
+				<div class="site-info">
+					&copy; <?php echo date('Y'); ?> <?php echo '<a href="'.home_url().'">'.get_bloginfo('name').'</a>'; ?>
+					<a class="credits" href="https://chooomedia.de" target="_blank" title="WordPress Technical Support" alt="Times-Art is a CHOOOMEDIA crafted Wordpress template">a CHOOOMEDIA WordPress Template</a>
+				</div><!-- close .site-info -->
+			</div>
 		</div>
 	</footer><!-- #colophon -->
 <?php endif; ?>
