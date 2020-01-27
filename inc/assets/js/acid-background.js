@@ -13,7 +13,7 @@ function getHeight() {
 var gl = canvas.getContext('webgl');
 if(!gl){
   console.error("Unable to initialize WebGL.");
-}
+}   
 
 //Time
 var time = 0.0;
@@ -154,7 +154,7 @@ var lastFrame = Date.now();
 var thisFrame;
 
 function draw() {
-
+    onWindowResize();
     //Update time
     thisFrame = Date.now();
     time += (thisFrame - lastFrame) / 1620;
@@ -164,7 +164,6 @@ function draw() {
     gl.uniform1f(timeHandle, time);
     //Draw a triangle strip connecting vertices 0-4
     gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
-
     requestAnimationFrame(draw);
 }
 

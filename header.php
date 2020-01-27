@@ -23,13 +23,13 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wp-bootstrap-starter' ); ?></a>
     <?php if(!is_page_template( 'blank-page.php' ) && !is_page_template( 'blank-page-with-container.php' )): ?>
-	<header id="masthead" class="vh-100 site-header navbar-static-top <?php echo WP_Times_art_bg_class(); ?>" role="banner">
+	<header id="masthead" class="shadow-lg vh-100 site-header navbar-static-top <?php echo WP_Times_art_bg_class(); ?>" role="banner">
         <div id="canvasWrapper" class="no-color">
             <canvas id="art-background" width="getWidth()" height="getHeight()"></canvas>
         </div>
         <script src="<?php echo get_template_directory_uri(); ?>/inc/assets/js/acid-background.js"></script>
         <div class="container-fullwidth">
-            <nav class="navbar px-md-5 navbar-expand-xl p-0 col-12">
+            <nav class="navbar pl-md-5 py-0 navbar-expand-xl col-12">
                 <div class="navbar-brand">
                     <?php if ( get_theme_mod( 'WP_Times_art_logo' ) ): ?>
                         <a href="<?php echo esc_url( home_url( '/' )); ?>">

@@ -75,7 +75,6 @@ function WP_Times_art_setup() {
 endif;
 add_action( 'after_setup_theme', 'WP_Times_art_setup' );
 
-
 /**
  * Add Welcome message to dashboard
  */
@@ -110,6 +109,9 @@ function WP_Times_art_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'WP_Times_art_content_width', 1170 );
 }
 add_action( 'after_setup_theme', 'WP_Times_art_content_width', 0 );
+
+/** Add Support to showing post thumbnails in Frontpage */
+add_theme_support( 'post-thumbnails' ); 
 
 /**
  * Register widget area.
@@ -155,6 +157,14 @@ function WP_Times_art_widgets_init() {
     ) );
 }
 add_action( 'widgets_init', 'WP_Times_art_widgets_init' );
+
+// Category Classes for Portfolio
+function sps_category(){
+    $categories = get_the_category();   
+    foreach ( $categories as $category ) {
+        echo $category->cat_name;
+    }
+}
 
 
 /**
