@@ -78,6 +78,7 @@ function WP_Times_art_customize_register( $wp_customize ) {
         'type'    => 'select',
         'choices' => array(
             'default' => 'Default',
+            'times-art' => 'Times-art',
             'arbutusslab-opensans' => 'Arbutus Slab / Opensans',
             'montserrat-merriweather' => 'Montserrat / Merriweather',
             'montserrat-opensans' => 'Montserrat / Opensans',

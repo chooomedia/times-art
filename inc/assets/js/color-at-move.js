@@ -1,7 +1,9 @@
 jQuery(function($) {
     var canvasWrapper = $("#canvasWrapper");
+    var portfolioBox = $(".post-img");
+
     var page = $("#page");
-    // var portfolio-box = $("art-background");
+
     var isMousemove = false;
 
     page.on("mousemove", function (event) {
@@ -10,11 +12,13 @@ jQuery(function($) {
 
     page.mousestop(function() {
         canvasWrapper.addClass("no-color");
+        portfolioBox.addClass("no-color");
     });
 
     page.on("mousemove", function (event) {
         if (isMousemove) {
             canvasWrapper.removeClass("no-color");
+            portfolioBox.removeClass("no-color");
         }
     });
 });

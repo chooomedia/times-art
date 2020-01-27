@@ -37,7 +37,13 @@ Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, 
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
+@font-face { 
+  font-family: "Times-art"; 
+  src: url("inc/assets/fonts/FirstFont.ttf"); 
+}
+
 body {
+  font-family: 'Times-art';
   margin: 0;
   -webkit-font-smoothing: auto;
 }

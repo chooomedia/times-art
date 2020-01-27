@@ -186,6 +186,9 @@ function WP_Times_art_scripts() {
     if(get_theme_mod( 'theme_option_setting' ) && get_theme_mod( 'theme_option_setting' ) !== 'default') {
         wp_enqueue_style( 'wp-bootstrap-starter-'.get_theme_mod( 'theme_option_setting' ), get_template_directory_uri() . '/inc/assets/css/presets/theme-option/'.get_theme_mod( 'theme_option_setting' ).'.css', false, '' );
     }
+    if(get_theme_mod( 'preset_style_setting' ) === 'times-art') {
+        wp_enqueue_style( 'wp-bootstrap-starter-times-art-font', get_template_directory_uri() . '/inc/assets/css/fonts/times-art.css');
+    }
     if(get_theme_mod( 'preset_style_setting' ) === 'poppins-lora') {
         wp_enqueue_style( 'wp-bootstrap-starter-poppins-lora-font', 'https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i|Poppins:300,400,500,600,700' );
     }
