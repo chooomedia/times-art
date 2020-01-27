@@ -916,6 +916,7 @@ li.cat-item a {
 
 .post.hentry {
   margin-bottom: 4rem;
+  font-family: sans-serif;
 }
 
 .posted-on, .byline, .comments-link {
@@ -1126,6 +1127,7 @@ footer#colophon {
 }
 body:not(.theme-preset-active) footer#colophon {
   color: #99979c;
+  font-family: sans-serif;
 }
 .site-info {
   font-size: .7rem;
