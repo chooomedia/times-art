@@ -331,7 +331,7 @@ header#masthead {
 }
 
 .navbar-brand {
-  width: 3rem;
+  width: 2.5rem;
 }
 
 .site-title {
@@ -465,6 +465,7 @@ li.menu-item:hover {
   text-transform: uppercase;
   max-width: max-content;
   font-size: 1rem;
+  font-weight: bolder;
 }
 
 .footer-cta a {
@@ -844,12 +845,12 @@ a img.aligncenter {
 }
 
 ul.categories {
-  width: 58%;
   border-top: 2.5px solid rgba(0,0,0,0.4);
   padding: 0;
   margin: 0 auto;
+  font-family: sans-serif;
   display: flex;
-  line-height: 5rem;
+  line-height: 4rem;
   justify-content: center;
 }
 
@@ -902,7 +903,14 @@ li.cat-item a {
 .entry-content,
 .entry-summary {
   margin: 1.5em 0 0;
+  font-family: sans-serif;
+  font-weight: 400;
 }
+
+.entry-content p {
+  font-weight: bolder;
+}
+
 
 .page-links {
   clear: both;
@@ -917,6 +925,7 @@ li.cat-item a {
 .post.hentry {
   margin-bottom: 4rem;
   font-family: sans-serif;
+  font-weight: 100;
 }
 
 .posted-on, .byline, .comments-link {

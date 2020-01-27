@@ -33,7 +33,7 @@ get_header(); ?>
 		<!-- Loop the Posts if Front-Page -->
 		<?php if(is_front_page()) : ?>
 		<nav class="col-12 p-md-0 m-0 aria-label="Categories List">
-			<ul class="categories">
+			<ul class="col-md-6 col-10 categories">
 				<?php wp_list_categories('title_li='); ?>
 			</ul>
 		</nav>
