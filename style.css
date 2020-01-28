@@ -677,7 +677,7 @@ body:not(.theme-preset-active) #masthead .navbar-nav > li.current_page_item > a 
   height: 192px;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: cover;
 }
 
 .post-navigation .nav-next a::after {

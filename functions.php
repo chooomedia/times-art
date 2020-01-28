@@ -148,6 +148,12 @@ function sps_category(){
     }
 }
 
+// More Rights to style Theme for Editors
+add_action( 'init', 'my_role_modification' );
+function my_role_modification() {
+    $role = get_role( 'editor' );
+    $role->add_cap( 'edit_theme_options' );
+}
 
 /**
  * Enqueue scripts and styles.
