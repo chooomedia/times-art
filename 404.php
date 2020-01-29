@@ -22,8 +22,6 @@ get_header(); ?>
 
 					<?php
 						get_search_form();
-
-
 					?>
 
 				</div><!-- .page-content -->
