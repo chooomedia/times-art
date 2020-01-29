@@ -3,12 +3,12 @@ Theme Name: Times Art Theme
 Theme URI: https://chooomedia.de/#times-art/
 Author: Christopher Matt
 Author URI: https://chooomedia.de/
-Description:  Simple and Creative Design Agency Portfolio Tempalte based on Twitter Bootstrap 4
+Description:  Simple and Creative Design Agency Portfolio Template based on Twitter Bootstrap 4
 Version: 0.7
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: wp-times-art
-Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, right-sidebar, custom-background, e-commerce, theme-options, sticky-post, full-width-template
+Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, no-sidebar, custom-background, e-commerce, theme-options, sticky-post, full-width-template
 */
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
@@ -283,6 +283,7 @@ img {
 
 .portfolio-thumbnail {
   background-size: cover;
+  min-height: 64vh;
 }
 
 figure {
@@ -1253,6 +1254,13 @@ body:not(.theme-preset-active) footer#colophon {
 }
 
 @media only screen and (max-width: 479px) {
+  .mt-10 {
+    margin-top: 3rem !important;
+  }
+  .portfolio-thumbnail {
+    background-position: center;
+    min-height: 50vh;
+}
   li.cat-item {
     padding: 0 .5rem;
     font-size: 1rem;
