@@ -11,9 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="row mt-10">
-		<div class="col-md-7 shadow">
-			<?php the_post_thumbnail(); ?>
-		</div>
+		<div class="col-md-7 shadow p-0 portfolio-thumbnail" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>');background-repeat: no-repeat;"></div>
 		<div class="col-md-5">
 			<header class="entry-header">
 				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
@@ -23,7 +21,7 @@
 					the_content();
 
 					wp_link_pages( array(
-						'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wp-bootstrap-starter' ),
+						'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wp-times-art' ),
 						'after'  => '</div>',
 					) );
 				?>

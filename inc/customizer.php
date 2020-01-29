@@ -21,8 +21,8 @@ function WP_Times_art_customize_register( $wp_customize ) {
     $wp_customize->add_section(
         'typography',
         array(
-            'title' => __( 'Preset Styles', 'wp-bootstrap-starter' ),
-            //'description' => __( 'This is a section for the typography', 'wp-bootstrap-starter' ),
+            'title' => __( 'Preset Styles', 'wp-times-art' ),
+            //'description' => __( 'This is a section for the typography', 'wp-times-art' ),
             'priority' => 20,
         )
     );
@@ -35,7 +35,7 @@ function WP_Times_art_customize_register( $wp_customize ) {
         'sanitize_callback' => 'wp_filter_nohtml_kses',
     ) );
     $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'theme_option_setting', array(
-        'label' => __( 'Theme Option', 'wp-bootstrap-starter' ),
+        'label' => __( 'Theme Option', 'wp-times-art' ),
         'section'    => 'typography',
         'settings'   => 'theme_option_setting',
         'type'    => 'select',
@@ -72,7 +72,7 @@ function WP_Times_art_customize_register( $wp_customize ) {
         'sanitize_callback' => 'wp_filter_nohtml_kses',
     ) );
     $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'preset_style_setting', array(
-        'label' => __( 'Typography', 'wp-bootstrap-starter' ),
+        'label' => __( 'Typography', 'wp-times-art' ),
         'section'    => 'typography',
         'settings'   => 'preset_style_setting',
         'type'    => 'select',
@@ -98,7 +98,7 @@ function WP_Times_art_customize_register( $wp_customize ) {
         'sanitize_callback' => 'wp_filter_nohtml_kses',
     ) );
     $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'preset_color_scheme_setting', array(
-        'label' => __( 'Color Scheme', 'wp-bootstrap-starter' ),
+        'label' => __( 'Color Scheme', 'wp-times-art' ),
         'section'    => 'typography',
         'settings'   => 'preset_color_scheme_setting',
         'type'    => 'select',
@@ -116,7 +116,7 @@ function WP_Times_art_customize_register( $wp_customize ) {
     $wp_customize->add_section(
         'header_image',
         array(
-            'title' => __( 'Header Banner', 'wp-bootstrap-starter' ),
+            'title' => __( 'Header Banner', 'wp-times-art' ),
             'priority' => 30,
         )
     );
@@ -125,7 +125,7 @@ function WP_Times_art_customize_register( $wp_customize ) {
     $wp_customize->add_control(
         'header_img',
         array(
-            'label' => __( 'Header Image', 'wp-bootstrap-starter' ),
+            'label' => __( 'Header Image', 'wp-times-art' ),
             'section' => 'header_images',
             'type' => 'text',
         )
@@ -143,29 +143,29 @@ function WP_Times_art_customize_register( $wp_customize ) {
             $wp_customize,
             'header_bg_color',
             array(
-                'label'      => __( 'Header Banner Background Color', 'wp-bootstrap-starter' ),
+                'label'      => __( 'Header Banner Background Color', 'wp-times-art' ),
                 'section'    => 'header_image',
                 'settings'   => 'header_bg_color_setting',
             ) )
     );
 
     $wp_customize->add_setting( 'header_banner_title_setting', array(
-        'default' => __( 'WP Bootstrap Framework', 'wp-bootstrap-starter' ),
+        'default' => __( 'WP Bootstrap Framework', 'wp-times-art' ),
         'sanitize_callback' => 'wp_filter_nohtml_kses',
     ) );
     $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'header_banner_title_setting', array(
-        'label' => __( 'Banner Title', 'wp-bootstrap-starter' ),
+        'label' => __( 'Banner Title', 'wp-times-art' ),
         'section'    => 'header_image',
         'settings'   => 'header_banner_title_setting',
         'type' => 'text'
     ) ) );
 
     $wp_customize->add_setting( 'header_banner_tagline_setting', array(
-        'default' => __( 'To customize the contents of this header banner and other elements of your site go to Dashboard - Appearance - Customize','wp-bootstrap-starter' ),
+        'default' => __( 'To customize the contents of this header banner and other elements of your site go to Dashboard - Appearance - Customize','wp-times-art' ),
         'sanitize_callback' => 'wp_filter_nohtml_kses',
     ) );
     $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'header_banner_tagline_setting', array(
-        'label' => __( 'Banner Tagline', 'wp-bootstrap-starter' ),
+        'label' => __( 'Banner Tagline', 'wp-times-art' ),
         'section'    => 'header_image',
         'settings'   => 'header_banner_tagline_setting',
         'type' => 'text'
@@ -176,7 +176,7 @@ function WP_Times_art_customize_register( $wp_customize ) {
     ) );
     $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'header_banner_visibility', array(
         'settings' => 'header_banner_visibility',
-        'label'    => __('Remove Header Banner', 'wp-bootstrap-starter'),
+        'label'    => __('Remove Header Banner', 'wp-times-art'),
         'section'    => 'header_image',
         'type'     => 'checkbox',
     ) ) );
@@ -186,16 +186,16 @@ function WP_Times_art_customize_register( $wp_customize ) {
    $wp_customize->add_section(
         'site_name_text_color',
         array(
-            'title' => __( 'Other Customizations', 'wp-bootstrap-starter' ),
-            //'description' => __( 'This is a section for the header banner Image.', 'wp-bootstrap-starter' ),
+            'title' => __( 'Other Customizations', 'wp-times-art' ),
+            //'description' => __( 'This is a section for the header banner Image.', 'wp-times-art' ),
             'priority' => 40,
         )
     );
     $wp_customize->add_section(
         'colors',
         array(
-            'title' => __( 'Background Color', 'wp-bootstrap-starter' ),
-            //'description' => __( 'This is a section for the header banner Image.', 'wp-bootstrap-starter' ),
+            'title' => __( 'Background Color', 'wp-times-art' ),
+            //'description' => __( 'This is a section for the header banner Image.', 'wp-times-art' ),
             'priority' => 50,
             'panel' => 'styling_option_panel',
         )
@@ -203,8 +203,8 @@ function WP_Times_art_customize_register( $wp_customize ) {
     $wp_customize->add_section(
         'background_image',
         array(
-            'title' => __( 'Background Image', 'wp-bootstrap-starter' ),
-            //'description' => __( 'This is a section for the header banner Image.', 'wp-bootstrap-starter' ),
+            'title' => __( 'Background Image', 'wp-times-art' ),
+            //'description' => __( 'This is a section for the header banner Image.', 'wp-times-art' ),
             'priority' => 60,
             'panel' => 'styling_option_panel',
         )
@@ -212,14 +212,14 @@ function WP_Times_art_customize_register( $wp_customize ) {
 
     // Bootstrap and Fontawesome Option
     $wp_customize->add_setting( 'cdn_assets_setting', array(
-        'default' => __( 'no','wp-bootstrap-starter' ),
+        'default' => __( 'no','wp-times-art' ),
         'sanitize_callback' => 'wp_filter_nohtml_kses',
     ) );
     $wp_customize->add_control( 
         'cdn_assets',
         array(
-            'label' => __( 'Use CDN for Assets', 'wp-bootstrap-starter' ),
-            'description' => __( 'All Bootstrap Assets and FontAwesome will be loaded in CDN.', 'wp-bootstrap-starter' ),
+            'label' => __( 'Use CDN for Assets', 'wp-times-art' ),
+            'description' => __( 'All Bootstrap Assets and FontAwesome will be loaded in CDN.', 'wp-times-art' ),
             'section' => 'site_name_text_color',
             'settings' => 'cdn_assets_setting',
 	        'type'    => 'select',
@@ -240,11 +240,11 @@ function WP_Times_art_customize_register( $wp_customize ) {
 
     // Add control for logo uploader
     $wp_customize->add_setting( 'WP_Times_art_logo', array(
-        //'default' => __( '', 'wp-bootstrap-starter' ),
+        //'default' => __( '', 'wp-times-art' ),
         'sanitize_callback' => 'esc_url',
     ) );
     $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'WP_Times_art_logo', array(
-        'label'    => __( 'Upload Logo (replaces text)', 'wp-bootstrap-starter' ),
+        'label'    => __( 'Upload Logo (replaces text)', 'wp-times-art' ),
         'section'  => 'title_tagline',
         'settings' => 'WP_Times_art_logo',
     ) ) );

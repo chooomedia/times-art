@@ -20,7 +20,7 @@
             <div class="offset-md-3 col-md-6 text-center">
 				<div class="container">
 				<div class="footer-cta col-4">
-					<a title="Get in Touch" href="http://times-art.chooomedia.de/get-in-touch/">Get in Touch</a>
+					<a title="Get in Touch" href="/get-in-touch/">Get in Touch</a>
 				</div>
 					<nav class="footer-nav">
 						<?php get_template_part( 'footer-widget' ); ?>

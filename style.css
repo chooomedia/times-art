@@ -281,6 +281,10 @@ img {
   /* Adhere to container width. */
 }
 
+.portfolio-thumbnail {
+  background-size: cover;
+}
+
 figure {
   margin: 1em 0;
   /* Extra wide images within figure tags don't overflow the content area. */
@@ -459,18 +463,46 @@ li.menu-item:hover {
 }
 
 .footer-cta {
-  background: #000;
+  background-color: #000;
+  border: unset;
   padding: .7rem 1rem;
   margin: 0 auto 1.3rem auto;
   text-transform: uppercase;
   max-width: max-content;
   font-size: 1rem;
   font-weight: bolder;
+  border-radius: unset;
 }
 
 .footer-cta a {
   color: #FFF !important;
   padding: 0;
+}
+
+.contact-input {
+  outline: unset;
+  box-shadow: unset;
+  border: unset;
+  line-height: 2.7rem;
+  height: 2.85rem;
+  padding: 0 .5rem;
+  border-bottom: 2.5px solid rgba(0,0,0,.33);
+  border-radius: unset;
+  text-transform: uppercase;
+  transition: all .6s;
+}
+
+.contact-input:focus {
+  border: unset;
+  box-shadow: unset !important;
+  border-bottom: 2.5px solid rgba(0,0,0,.77);
+}
+
+input.contact-form, textarea.contact-form {
+  font-family: sans-serif;
+  color: #000 !important;
+  letter-spacing: 1px;
+  font-weight: bolder;
 }
 
 .contact:hover {
