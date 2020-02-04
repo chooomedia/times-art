@@ -10,22 +10,27 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="row mt-10">
-		<div class="col-md-7 shadow p-0 portfolio-thumbnail mb-5" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>');background-repeat: no-repeat;"></div>
-		<div class="col-md-5">
-			<header class="entry-header">
-				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-			</header><!-- .entry-header -->
-			<div class="entry-content">
-				<?php
-					the_content();
-
-					wp_link_pages( array(
-						'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wp-times-art' ),
-						'after'  => '</div>',
-					) );
-				?>
-			</div><!-- .entry-content -->
+	<header id="posthead" class="row entry-header mx-2 sticky-top">
+		<div class="col-md-8 px-md-2">
+			<div class="btn-back" onclick="history.back();" aria-label="back">< Back </div>
 		</div>
-	</div>
+		<div class="col-md-4">
+			<h1 class="entry-title mb-0 pb-0">
+				<?php the_title(); ?><br>
+				<span style="font-size: 1rem;">
+					<?php foreach((get_the_category()) as $category) { echo $category->cat_name . ' '; } ?>
+				</span>
+			</h1>
+		</div>
+	</header><!-- .entry-header -->
+	<div class="entry-content">
+		<?php
+			the_content();
+
+			wp_link_pages( array(
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wp-times-art' ),
+				'after'  => '</div>',
+			) );
+		?>
+	</div><!-- .entry-content -->
 </article><!-- #post-## -->

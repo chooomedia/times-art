@@ -23,13 +23,22 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wp-times-art' ); ?></a>
     <?php if(!is_page_template( 'blank-page.php' ) && !is_page_template( 'blank-page-with-container.php' )): ?>
-	<header id="masthead" class="shadow-lg vh-100 site-header navbar-static-top <?php echo WP_Times_art_bg_class(); ?>" role="banner">
+    <!-- Show art background on frontpage -->
+    <?php if (is_front_page() && !is_single()) : ?>
+    <header id="masthead" class="shadow-lg vh-100 site-header navbar-static-top <?php echo WP_Times_art_bg_class(); ?>" role="banner">
         <div id="canvasWrapper" class="no-color">
             <canvas id="art-background" width="getWidth()" height="getHeight()"></canvas>
         </div>
         <script src="<?php echo get_template_directory_uri(); ?>/inc/assets/js/acid-background.js"></script>
-        <div class="container-fullwidth">
-            <nav class="navbar pl-md-5 py-0 navbar-expand-xl col-12">
+    <? endif; ?>
+
+    <!-- Show background thumbnail on single-sites -->
+    <? if (!is_front_page() && is_page() || is_single()) : ?>
+    <header id="masthead" class="shadow-lg site-header navbar-static-top header-thumbnail <?php echo WP_Times_art_bg_class(); ?>" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>');" role="banner">
+    <? endif; ?>
+    
+        <div class="container">
+            <nav class="navbar pl-md-5 py-0 navbar-expand-xl col-12 fixed-top">
                 <div class="navbar-brand">
                     <?php if ( get_theme_mod( 'WP_Times_art_logo' ) ): ?>
                         <a href="<?php echo esc_url( home_url( '/' )); ?>">
@@ -60,26 +69,31 @@
 
 
             <div id="subheader">
-                <div class="container vh-100 d-flex justify-center">
-                    <div class="col-12 my-auto p-0">
-                        <h1>
-                            <?php
-                            if(get_theme_mod( 'header_banner_title_setting' )){
-                                echo get_theme_mod( 'header_banner_title_setting' );
-                            }else{
-                                echo 'CHOOOMEDIA + Wordpress';
-                            }
-                            ?>
-                        </h1>
-                        <p>
-                            <?php
-                            if(get_theme_mod( 'header_banner_tagline_setting' )){
-                                echo get_theme_mod( 'header_banner_tagline_setting' );
-                            }
-                            ?>
-                        </p>
-                        <a href="#content" class="page-scroller"><i class="fa fa-2x fa-angle-down"></i></a>
+                <div class="container">
+                <?php if (is_front_page() && !is_single()) : ?>
+                    <div class="vh-100 d-flex justify-center">
+                        <div class="col-12 my-auto p-0">
+                            <h1>
+                                <?php
+                                if(get_theme_mod( 'header_banner_title_setting' )){
+                                    echo get_theme_mod( 'header_banner_title_setting' );
+                                }else{
+                                    echo 'CHOOOMEDIA + Wordpress';
+                                }
+                                ?>
+                            </h1>
+                            <p>
+                                <?php
+                                if(get_theme_mod( 'header_banner_tagline_setting' )){
+                                    echo get_theme_mod( 'header_banner_tagline_setting' );
+                                }
+                                ?>
+                            </p>
+                            
+                                <a href="#content" class="page-scroller"><i class="fa fa-2x fa-angle-down"></i></a>
+                        </div>
                     </div>
+                <?php endif; ?>
                 </div>
             </div>
         </div>

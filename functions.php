@@ -79,10 +79,10 @@ add_action( 'after_setup_theme', 'WP_Times_art_setup' );
  * Add Welcome message to dashboard
  */
 function WP_Times_art_reminder(){
-        $theme_page_url = 'https://afterimagedesigns.com/wp-times-art/?dashboard=1';
+        $theme_page_url = 'https://themes.chooomedia.de/#times-art';
 
             if(!get_option( 'triggered_welcomet')){
-                $message = sprintf(__( 'Welcome to WP Bootstrap Starter Theme! Before diving in to your new theme, please visit the <a style="color: #fff; font-weight: bold;" href="%1$s" target="_blank">theme\'s</a> page for access to dozens of tips and in-depth tutorials.', 'wp-times-art' ),
+                $message = sprintf(__( 'Welcome to the Times-art Template! If you have some issues to manage your Content with WordPress look on our <a style="color: #fff; font-weight: bold;" href="https://www.youtube.com/watch?v=ir3EV5wAitI&t=54s" target="_blank">Tutorial</a>', 'wp-times-art' ),
                     esc_url( $theme_page_url )
                 );
 
@@ -235,7 +235,9 @@ function WP_Times_art_scripts() {
     // add Mousemove & Mousestop Color functions
     wp_enqueue_script( 'color-at-move', get_template_directory_uri() . '/inc/assets/js/color-at-move.js', array(), '1.0.0', true );
     wp_enqueue_script( 'mousestop', get_template_directory_uri() . '/inc/assets/js/mousestop.js', array(), '1.0.0', true );
-
+    
+    // add Scrolling Animations to scroll-Arrow and so on
+    wp_enqueue_script( 'scoll-animation', get_template_directory_uri() . '/inc/assets/js/scroll-animation.js', array(), '1.0.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'WP_Times_art_scripts' );
 

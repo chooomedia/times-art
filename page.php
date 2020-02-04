@@ -32,7 +32,7 @@ get_header(); ?>
 
 		<!-- Loop the Posts if Front-Page -->
 		<?php if(is_front_page()) : ?>
-		<nav class="col-12 p-md-0 m-0 aria-label="Categories List">
+		<nav class="col-12 p-md-0 m-0" aria-label="Categories List">
 			<ul class="col-md-6 col-10 categories">
 				<?php wp_list_categories('title_li='); ?>
 			</ul>
@@ -46,7 +46,7 @@ get_header(); ?>
 			$q    = new WP_Query( $args );
 		?>
 
-		<div class="row mt-4">
+		<div class="row">
 			<?php while ( $q->have_posts() ) : $q->the_post();?>
 			<?php if (has_post_thumbnail( $post->ID )) : ?>
             <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); endif ?>

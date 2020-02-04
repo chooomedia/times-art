@@ -9,6 +9,13 @@ function getHeight() {
     canvas.width = body.height;
 }
 
+var ua = window.navigator.userAgent;
+var msie = ua.indexOf('MSIE ');
+if (msie > 0) {
+    var dataURL = canvas.toDataURL();
+    document.getElementById("art-background").style.backgroundImage = "url('" + dataURL + "');";
+}
+
 // Initialize the GL context
 var gl = canvas.getContext('webgl');
 if(!gl){
