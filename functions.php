@@ -155,6 +155,13 @@ function my_role_modification() {
     $role->add_cap( 'edit_theme_options' );
 }
 
+// Define the length of the short description / excerption
+function custom_excerpt_length( $length ) {
+    return 47;
+    }
+
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
 /**
  * Enqueue scripts and styles.
  */
@@ -235,6 +242,9 @@ function WP_Times_art_scripts() {
     // add Mousemove & Mousestop Color functions
     wp_enqueue_script( 'color-at-move', get_template_directory_uri() . '/inc/assets/js/color-at-move.js', array(), '1.0.0', true );
     wp_enqueue_script( 'mousestop', get_template_directory_uri() . '/inc/assets/js/mousestop.js', array(), '1.0.0', true );
+    
+    // add Show-Animation on Portfolio Boxed on "hover"
+    wp_enqueue_script( 'on-hover-actions', get_template_directory_uri() . '/inc/assets/js/on-hover-actions.js', array(), '1.0.0', true );
     
     // add Scrolling Animations to scroll-Arrow and so on
     wp_enqueue_script( 'scoll-animation', get_template_directory_uri() . '/inc/assets/js/scroll-animation.js', array(), '1.0.0', true );

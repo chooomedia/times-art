@@ -791,7 +791,22 @@ body:not(.theme-preset-active) #masthead .navbar-nav > li.current_page_item > a 
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  transition: all .4s !important;
+}
 
+.post-img-p {
+  transition: all .6s;
+  transform: scale(0);
+  margin: 0 auto;
+  height: inherit;
+  padding: 1rem;
+  font-family: sans-serif;
+  color: #fff;
+  background: rgba(0,0,0,.8);
+}
+
+.scale {
+  transform: scale(1);
 }
 
 .post-img:hover {
@@ -1336,6 +1351,23 @@ body:not(.theme-preset-active) footer#colophon {
 }
 
 @media only screen and (max-width: 479px) {
+  .post-img {
+    height: 384px;
+  }
+
+  .post-img-p {
+    display: none;
+  }
+
+  .top-1 {
+    transform: translateY(-.79rem);
+    padding: 1rem 0 0 0;
+  }
+
+  header#posthead {
+    background: #FFF !important;
+  }
+
   #masthead nav {
     max-height: inherit;
   }
