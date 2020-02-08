@@ -341,7 +341,9 @@ table {
 
 header#masthead {
   margin-bottom: 0;
+  background-position: center top;
   background-color: transparent;
+  /*background-attachment: fixed;*/
   padding: 0;
 }
 
@@ -415,7 +417,7 @@ header#posthead {
 }
 
 #subheader h1 {
-  color: #FFF;
+  /*color: #FFF; */
   font-size: 12vw;
   letter-spacing: 2rem;
 }
@@ -1010,6 +1012,26 @@ li.cat-item a {
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+
+.outline {
+  color: white;
+  text-shadow:
+     -2px -2px 0 #FFF,  
+      2px -2px 0 #FFF,
+      -2px 2px 0 #FFF,
+       2px 2px 0 #FFF
+}
+
+@supports((text-stroke: 4px white) or (-webkit-text-stroke: 4px white)) {
+  .outline {
+      color: transparent;
+      -webkit-text-stroke: 4px white;
+      text-stroke: 4px white;
+      text-shadow: none;
+  }
+}
+
+
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/

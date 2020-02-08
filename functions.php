@@ -157,7 +157,7 @@ function my_role_modification() {
 
 // Define the length of the short description / excerption
 function custom_excerpt_length( $length ) {
-    return 47;
+    return 24;
     }
 
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );

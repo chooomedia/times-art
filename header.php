@@ -73,7 +73,7 @@
                 <?php if (is_front_page() && !is_single()) : ?>
                     <div class="vh-100 d-flex justify-center">
                         <div class="col-12 my-auto p-0">
-                            <h1>
+                            <h1 class="mt-10 outline">
                                 <?php
                                 if(get_theme_mod( 'header_banner_title_setting' )){
                                     echo get_theme_mod( 'header_banner_title_setting' );
