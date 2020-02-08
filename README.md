@@ -1,2 +1,2 @@
 # times-art
-Simple Portfolio template for Wrodpress based on Bootstrap 4
+Simple Portfolio template for Wordpress with fancy canvas landingpage animation based on Bootstrap 4
