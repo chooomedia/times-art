@@ -58,6 +58,17 @@ WP Bootstrap Starter includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
+= 1.0 - February 20, 2020 =
+* Added Mixitup JS Script for fancy sort-Function of the posts
+
+= 0.9 - February 19, 2020 =
+* Changed Hover Excerpt animation
+* CSS Bug fixings
+
+= 0.8 - February 15, 2020 =
+* Added Scroll Animation
+* Added Hover Excerpt inside Portfolio Boxes
+
 = 0.7 - January 28, 2020 =
 * Added Footer Widget
 * Styled Post Template
