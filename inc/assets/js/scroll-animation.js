@@ -1,13 +1,14 @@
 jQuery(function ($) {
-    var fadeStart = 100, fadeUntil = 500, fading = $('.page-scroller');
-    var mastHead = $("#masthead nav");
-    var postHead = $("#posthead");
-    var addSticky = $(".add-sticky");
-    var entryTitle = $(".entry-title");
+    let fadeStart = 100, fadeUntil = 500, fading = $('.page-scroller'),
+        mastHead = $("#masthead nav"),
+        postHead = $("#posthead"),
+        addSticky = $(".add-sticky"),
+        entryTitle = $(".entry-title");
+
 
     $(window).bind('scroll', function () {
-        var offset = $(document).scrollTop(),
-            opacity = 0;
+        let opacity = 0,
+            offset = $(document).scrollTop();
 
         if (offset <= fadeStart) {
             opacity = 1;
@@ -18,7 +19,7 @@ jQuery(function ($) {
             mastHead.css("background", "#FFF");
         }
 
-        if(offset >= 470) {
+        if (offset >= 470) {
             postHead.addClass("top-3");
             addSticky.addClass("top-9");
             entryTitle.addClass("top-1");

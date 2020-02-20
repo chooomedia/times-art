@@ -157,10 +157,18 @@ function my_role_modification() {
 
 // Define the length of the short description / excerption
 function custom_excerpt_length( $length ) {
-    return 24;
+    return 11;
     }
 
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+/**Add Schema.org Item propertie to nav links */
+function WP_Times_art__add_menu_atts( $atts, $item, $args ) {
+    $atts['itemprop'] = 'url';
+    return $atts;
+  }
+add_filter( 'nav_menu_link_attributes', 'WP_Times_art__add_menu_atts', 10, 3 );
+
 
 /**
  * Enqueue scripts and styles.
@@ -245,7 +253,7 @@ function WP_Times_art_scripts() {
     
     // add Show-Animation on Portfolio Boxed on "hover"
     wp_enqueue_script( 'on-hover-actions', get_template_directory_uri() . '/inc/assets/js/on-hover-actions.js', array(), '1.0.0', true );
-    
+
     // add Scrolling Animations to scroll-Arrow and so on
     wp_enqueue_script( 'scoll-animation', get_template_directory_uri() . '/inc/assets/js/scroll-animation.js', array(), '1.0.0', true );
 }

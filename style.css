@@ -378,8 +378,12 @@ header#posthead {
   background-repeat: no-repeat;
 }
 
-.wp-block-image img, .header-thumbnail, .post-box {
+.wp-block-image img, .header-thumbnail, .post-img-p {
   transition: all .6s cubic-bezier(0.785, 0.135, 0.15, 0.86) !important;
+}
+
+.post-box {
+  overflow: hidden;
 }
 
 .navbar-brand {
@@ -794,21 +798,28 @@ body:not(.theme-preset-active) #masthead .navbar-nav > li.current_page_item > a 
   background-position: center;
   background-size: cover;
   transition: all .4s !important;
+  overflow:hidden;
 }
 
 .post-img-p {
   transition: all .6s;
-  transform: scale(0);
+  transform: translateY(5rem);
+  opacity: 0;
+  z-index: -1;
   margin: 0 auto;
-  height: inherit;
+  height: auto;
   padding: 1rem;
   font-family: sans-serif;
   color: #fff;
   background: rgba(0,0,0,.8);
+  position: absolute;
+  bottom: 0;  
 }
 
-.scale {
-  transform: scale(1);
+.slide {
+  transform: translateY(0);
+  opacity: 1;
+  z-index: 3;
 }
 
 .post-img:hover {
@@ -1007,6 +1018,7 @@ li.cat-item {
 li.cat-item a {
   color: rgba(0,0,0,0.3);
   font-weight: bolder;
+  cursor: pointer;
 }
 
 /*--------------------------------------------------------------

@@ -38,12 +38,12 @@
     <? endif; ?>
     
         <div class="container">
-            <nav class="navbar pl-md-5 py-0 navbar-expand-xl col-12 fixed-top">
-                <div class="navbar-brand">
+            <nav class="navbar pl-md-5 py-0 navbar-expand-xl col-12 fixed-top" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement">
+                <div class="navbar-brand" itemprop itemtype="https://schema.org/Brand">
                     <?php if ( get_theme_mod( 'WP_Times_art_logo' ) ): ?>
                         <a href="<?php echo esc_url( home_url( '/' )); ?>">
-                            <img src="<?php echo esc_url(get_theme_mod( 'WP_Times_art_logo' )); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
-                            <a class="site-title" href="<?php echo esc_url( home_url( '/' )); ?>"><?php esc_url(bloginfo('name')); ?></a>
+                            <img itemprop="logo" src="<?php echo esc_url(get_theme_mod( 'WP_Times_art_logo' )); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
+                            <a itemprop="name" class="site-title" href="<?php echo esc_url( home_url( '/' )); ?>"><?php esc_url(bloginfo('name')); ?></a>
                         </a>
                     <?php endif; ?>
 

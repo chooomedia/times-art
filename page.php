@@ -33,8 +33,22 @@ get_header(); ?>
 		<!-- Loop the Posts if Front-Page -->
 		<?php if(is_front_page()) : ?>
 		<nav class="col-12 p-md-0 m-0" aria-label="Categories List">
-			<ul class="col-md-6 col-10 categories">
-				<?php wp_list_categories('title_li='); ?>
+			<ul class="col-md-7 col-10 categories">
+				<li class="cat-item">
+					<a data-filter="all">All</a>
+				</li>
+				<li class="cat-item">
+					<a data-filter=".Photography">Photography</a>
+				</li>
+				<li class="cat-item">
+					<a data-filter=".Design">Design</a>
+				</li>
+				<li class="cat-item">
+					<a data-filter=".Movie">Movie</a>
+				</li>
+				<li class="cat-item">
+					<a data-filter=".Art">Art</a>
+				</li>
 			</ul>
 		</nav>
 
@@ -46,19 +60,24 @@ get_header(); ?>
 			$q    = new WP_Query( $args );
 		?>
 
-		<div class="row">
-			<?php while ( $q->have_posts() ) : $q->the_post();?>
+		<section id="portfolio-container" class="row">
+			<?php while ( $q->have_posts()) : $q->the_post(); ?>
 			<?php if (has_post_thumbnail( $post->ID )) : ?>
+			<?php $n++ ?>
             <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); endif ?>
 				
-				<a class="col-md-4 px-md-4 post-box <?php sps_category() ?>" href="<?php the_permalink(); ?>">
-					<div class="post-img shadow no-color" style="background-image: url('<?php the_post_thumbnail_url(); ?>');">
-					<p class="post-img-p"><?php echo get_the_excerpt(); ?></p>
-					</div>
-					<h3><?php the_title(); ?></h3>
+				<a data-order="<?php echo $n ?>" class="col-md-4 px-md-4 post-box mix <?php sps_category() ?>" href="<?php the_permalink(); ?>">
+					<figure role="group" class="post-img shadow no-color" style="background-image: url('<?php the_post_thumbnail_url(); ?>');">
+						<figcaption class="post-img-p">
+							<?php echo get_the_excerpt(); ?>
+						</figcaption>
+					</figure>
+					<figcaption>
+						<h3><?php the_title(); ?></h3>
+					</figcaption>
 				</a>
 			<?php endwhile; ?>
-		</div>
+		</section>
 
 		<?php endif; ?>
 
