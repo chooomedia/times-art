@@ -260,6 +260,8 @@ function WP_Times_art_scripts() {
 add_action( 'wp_enqueue_scripts', 'WP_Times_art_scripts' );
 
 
+add_theme_support( 'responsive-embeds' );
+
 /**
  * Add Preload for CDN scripts and stylesheet
  */

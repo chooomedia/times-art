@@ -34,7 +34,7 @@
 
     <!-- Show background thumbnail on single-sites -->
     <? if (!is_front_page() && is_page() || is_single()) : ?>
-    <header id="masthead" class="shadow-lg site-header navbar-static-top header-thumbnail <?php echo WP_Times_art_bg_class(); ?>" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>');" role="banner">
+    <header id="masthead" class="shadow-lg site-header navbar-static-top header-thumbnail <?php echo WP_Times_art_bg_class(); ?>" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>'); background-position: center;" role="banner">
     <? endif; ?>
     
         <div class="container">

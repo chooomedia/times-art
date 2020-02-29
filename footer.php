@@ -35,10 +35,13 @@
 	</footer><!-- #colophon -->
 <?php endif; ?>
 </div><!-- #page -->
+
+<?php if(!is_singular('post') && is_page() ) : ?>
 <script src="./wp-content/themes/times-art/inc/assets/js/mixitup.min.js"></script>
 <script>
 	var mixer = mixitup('#portfolio-container');
 </script>
+<?php endif; ?>
 
 <?php wp_footer(); ?>
 </body>

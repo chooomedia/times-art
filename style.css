@@ -71,6 +71,22 @@ video {
   vertical-align: baseline;
 }
 
+figure.wp-block-video.shadow-lg > video {
+  width: 100%;
+  animation: slideIn 1 alternate;
+  transform: scaleY(1.04);
+  transition: all .4 cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 audio:not([controls]) {
   display: none;
   height: 0;
