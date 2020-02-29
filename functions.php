@@ -251,6 +251,9 @@ function WP_Times_art_scripts() {
     wp_enqueue_script( 'color-at-move', get_template_directory_uri() . '/inc/assets/js/color-at-move.js', array(), '1.0.0', true );
     wp_enqueue_script( 'mousestop', get_template_directory_uri() . '/inc/assets/js/mousestop.js', array(), '1.0.0', true );
     
+    // add Restyler Function for Headline
+    wp_enqueue_script( 'change-font', get_template_directory_uri() . '/inc/assets/js/change-font.js', array(), '1.0.0', true );
+    
     // add Show-Animation on Portfolio Boxed on "hover"
     wp_enqueue_script( 'on-hover-actions', get_template_directory_uri() . '/inc/assets/js/on-hover-actions.js', array(), '1.0.0', true );
 

@@ -1,0 +1,21 @@
+#posthead > div.col-md-8.p-0.col-4.px-md-2 > div,
+#menu-footer-menu li a {
+    font-family: 'Times-art';
+}
+
+#subheader > div > div > div > h1,
+#main-nav #menu-main-menu .nav-item > a {
+    font-family: sans-serif;
+}
+
+#subheader > div > div > div > h1.styled {
+    font-family: 'Times-art';
+    color: #fff;
+}
+
+.post-box h3 {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin: 1rem auto 3rem auto;
+}
