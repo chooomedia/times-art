@@ -14,7 +14,7 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area container">
+	<section id="primary">
 		<main id="main" class="site-main" role="main">
 
 			<?php
@@ -38,16 +38,13 @@ get_header(); ?>
 					<a data-filter="all">All</a>
 				</li>
 				<li class="cat-item">
-					<a data-filter=".Photography">Photography</a>
+					<a data-filter=".Commercials">Commercial</a>
 				</li>
 				<li class="cat-item">
-					<a data-filter=".Design">Design</a>
+					<a data-filter=".Classics">Classics</a>
 				</li>
 				<li class="cat-item">
-					<a data-filter=".Movie">Movie</a>
-				</li>
-				<li class="cat-item">
-					<a data-filter=".Art">Art</a>
+					<a data-filter=".Mixed">Mixed</a>
 				</li>
 			</ul>
 		</nav>
@@ -66,7 +63,7 @@ get_header(); ?>
 			<?php $n++ ?>
             <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); endif ?>
 				
-				<a data-order="<?php echo $n ?>" class="col-md-3 px-md-4 post-box mix <?php sps_category() ?>" href="<?php the_permalink(); ?>">
+				<a data-order="<?php echo $n ?>" class="col-md-3 col-lg-4 px-md-4 post-box mix <?php sps_category() ?>" href="<?php the_permalink(); ?>">
 					<figure role="group" class="post-img shadow no-color" style="background-image: url('<?php the_post_thumbnail_url(); ?>');">
 						<figcaption class="post-img-p">
 							<?php echo get_the_excerpt(); ?>

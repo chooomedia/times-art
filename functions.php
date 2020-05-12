@@ -132,7 +132,7 @@ function WP_Times_art_widgets_init() {
         'name'          => esc_html__( 'Footer Widget', 'wp-times-art' ),
         'id'            => 'footer-widget',
         'description'   => esc_html__( 'Add widgets here.', 'wp-times-art' ),
-        'before_widget' => '<div class="d-block justify-content-center">',
+        'before_widget' => '<div class="container">',
         'after_widget'  => '</div>',
         'before_title'  => '',
         'after_title'   => '',

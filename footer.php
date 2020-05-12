@@ -20,15 +20,14 @@
             <div class="offset-md-3 col-md-6 text-center">
 				<div class="container">
 				<div class="footer-cta col-4">
-					<a title="Get in Touch" href="/get-in-touch/">Get in Touch</a>
+					<a title="Get in Touch" href="/get-in-touch/">Contact</a>
 				</div>
 					<nav class="footer-nav">
 						<?php get_template_part( 'footer-widget' ); ?>
 					</nav>
 				</div>
 				<div class="site-info">
-					&copy; <?php echo date('Y'); ?> <?php echo '<a href="'.home_url().'">'.get_bloginfo('name').'</a>'; ?>
-					<a class="credits" href="https://chooomedia.de" target="_blank" title="WordPress Technical Support" alt="Times-Art is a CHOOOMEDIA crafted Wordpress template">a CHOOOMEDIA WordPress Template</a>
+					&copy; <?php echo date('Y'); ?> <?php echo '<a href="'.home_url().'">'.get_bloginfo('name').' Film GmbH</a>'; ?> 
 				</div><!-- close .site-info -->
 			</div>
 		</div>

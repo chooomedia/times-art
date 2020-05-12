@@ -26,10 +26,10 @@
     <!-- Show art background on frontpage -->
     <?php if (is_front_page() && !is_single()) : ?>
     <header id="masthead" class="shadow-lg vh-100 site-header navbar-static-top <?php echo WP_Times_art_bg_class(); ?>" role="banner">
-        <div id="canvasWrapper" class="no-color">
-            <canvas id="art-background" width="getWidth()" height="getHeight()"></canvas>
+        <div id="canvasWrapper" class="no-color bg-black vh-100">
+        
         </div>
-        <script src="<?php echo get_template_directory_uri(); ?>/inc/assets/js/acid-background.js"></script>
+        
     <? endif; ?>
 
     <!-- Show background thumbnail on single-sites -->
@@ -37,8 +37,8 @@
     <header id="masthead" class="shadow-lg site-header navbar-static-top header-thumbnail <?php echo WP_Times_art_bg_class(); ?>" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>'); background-position: center;" role="banner">
     <? endif; ?>
     
-        <div class="container">
-            <nav class="navbar pl-md-5 py-0 navbar-expand-xl col-12 fixed-top" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement">
+        <div class="col-12">
+            <nav class="container navbar py-0 navbar-expand-xl fixed-top" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement">
                 <div class="navbar-brand" itemprop itemtype="https://schema.org/Brand">
                     <?php if ( get_theme_mod( 'WP_Times_art_logo' ) ): ?>
                         <a href="<?php echo esc_url( home_url( '/' )); ?>">

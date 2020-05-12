@@ -41,6 +41,7 @@ function WP_Times_art_customize_register( $wp_customize ) {
         'type'    => 'select',
         'choices' => array(
             'default' => 'Default',
+            'groovymovie' => 'Groovy movie' ,
             'cerulean' => 'Cerulean',
             'cosmo' => 'Cosmo',
             'cyborg' => 'Cyborg',
@@ -89,7 +90,6 @@ function WP_Times_art_customize_register( $wp_customize ) {
             'robotoslab-roboto' => 'Roboto Slab / Roboto',
         )
     ) ) );
-
 
     /*$wp_customize->add_setting( 'preset_color_scheme_setting', array(
         'default'   => 'default',
