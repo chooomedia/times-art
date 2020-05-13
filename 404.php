@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area">
+	<section id="primary" class="content-area mt-5 pt-5 container">
 		<main id="main" class="site-main" role="main">
 
 			<section class="error-404 not-found text-center">
@@ -29,7 +29,8 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</section><!-- #primary -->
+	</div>
 
 <?php
-get_sidebar();
+// get_sidebar();
 get_footer();
