@@ -10,9 +10,9 @@
 get_header(); ?>
 
 	<section id="primary" class="content-area mt-5 pt-5 container">
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="site-main d-flex justify-center error-404" role="main" style="background: url()">
 
-			<section class="error-404 not-found text-center">
+		<section class="not-found text-center col-12 my-auto">
 				<header class="page-header">
 					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'wp-times-art' ); ?></h1>
 				</header><!-- .page-header -->
@@ -25,9 +25,9 @@ get_header(); ?>
 					?>
 
 				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
+			</section>
 
-		</main><!-- #main -->
+		</main><!-- #main .error-404 -->
 	</section><!-- #primary -->
 	</div>
 

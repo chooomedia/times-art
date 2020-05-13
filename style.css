@@ -73,7 +73,7 @@ video {
 
 /*Error 404 page styling*/
 .error-404 {
-  height: calc(100vh - 166.453px);
+  height: calc(80vh - 166.453px);
   background-position: center;
   background-size: cover;
 }
