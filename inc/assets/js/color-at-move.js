@@ -1,19 +1,21 @@
 jQuery(function($) {
-    var canvasWrapper = $("#canvasWrapper");
-    var portfolioBox = $(".post-img");
-    var headerThumb = $(".header-thumbnail");
-    var blockImg = $(".wp-block-image img");
+    let portfolioBox = $(".post-img");
+    let headerThumb = $(".header-thumbnail");
+    let blockImg = $(".wp-block-image img");
 
-    var page = $("#page");
+    let page = $("#page");
 
-    var isMousemove = false;
+    let isMousemove = false;
 
     page.on("mousemove", function (event) {
         isMousemove = true;
     });
 
     page.mousestop(function() {
-        canvasWrapper.addClass("no-color");
+        if($("iframe").length > 0) {
+            let iframe = $("iframe");
+            iframe.addClass("no-color");
+        }     
         portfolioBox.addClass("no-color");
         headerThumb.addClass("no-color");
         blockImg.addClass("no-color");
@@ -21,7 +23,10 @@ jQuery(function($) {
 
     page.on("mousemove", function (event) {
         if (isMousemove) {
-            canvasWrapper.removeClass("no-color");
+            if($("iframe").length > 0) {
+                iframe = $("iframe");
+                iframe.removeClass("no-color");
+            } 
             portfolioBox.removeClass("no-color");
             headerThumb.removeClass("no-color");
             blockImg.removeClass("no-color");

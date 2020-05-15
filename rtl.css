@@ -409,7 +409,7 @@ body:not(.theme-preset-active) #masthead .navbar-nav > li.current_page_item > a 
         padding-top: 0.313rem;
     }
 
-    .navbar-light .navbar-toggler {
+    .navbar-light .hamburger {
         border: medium none;
         outline: none;
     }

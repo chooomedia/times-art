@@ -5,7 +5,6 @@ jQuery(function ($) {
         addSticky = $(".add-sticky"),
         entryTitle = $(".entry-title");
 
-
     $(window).bind('scroll', function () {
         let opacity = 0,
             offset = $(document).scrollTop();

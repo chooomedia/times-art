@@ -63,7 +63,7 @@ get_header(); ?>
 			<?php $n++ ?>
             <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); endif ?>
 				
-				<a data-order="<?php echo $n ?>" class="col-md-3 col-lg-4 px-md-4 post-box mix <?php sps_category() ?>" href="<?php the_permalink(); ?>">
+				<a data-order="<?php echo $n ?>" class="col-md-4 col-lg-4 px-md-4 post-box mix <?php sps_category() ?>" href="<?php the_permalink(); ?>">
 					<figure role="group" class="post-img shadow no-color" style="background-image: url('<?php the_post_thumbnail_url(); ?>');">
 						<figcaption class="post-img-p">
 							<?php echo get_the_excerpt(); ?>

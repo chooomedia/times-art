@@ -182,6 +182,8 @@ function WP_Times_art_scripts() {
         wp_enqueue_style( 'wp-times-art-bootstrap-css', get_template_directory_uri() . '/inc/assets/css/bootstrap.min.css' );
         wp_enqueue_style( 'wp-times-art-fontawesome-cdn', get_template_directory_uri() . '/inc/assets/css/fontawesome.min.css' );
     }
+    
+    wp_enqueue_style( 'wp-times-art-hamburgers', get_template_directory_uri() . '/inc/assets/css/hamburgers.min.css' );
 	// load bootstrap css
 	// load AItheme styles
 	// load WP Bootstrap Starter styles
