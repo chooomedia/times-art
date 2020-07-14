@@ -22,16 +22,21 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wp-times-art' ); ?></a>
-    <!-- Show art background on frontpage -->
-    <?php if (is_front_page() && !is_single()) : ?>
-    <header id="masthead" class="shadow-lg vh-100 site-header navbar-static-top <?php echo WP_Times_art_bg_class(); ?>" role="banner">
-        <div id="canvasWrapper" class="no-color">
-            <canvas id="art-background" width="getWidth()" height="getHeight()"></canvas>
-        </div>
-        <script src="<?php echo get_template_directory_uri(); ?>/inc/assets/js/acid-background.js"></script>
-    <? else : ?>
-    <header id="masthead" class="shadow-lg site-header navbar-static-top header-thumbnail <?php echo WP_Times_art_bg_class(); ?>" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>'); background-position: center;" role="banner">
-    <? endif; ?>
+    <?php if(!is_page_template( 'blank-page.php' ) && !is_page_template( 'blank-page-with-container.php' )): ?>
+    
+    <?php if(is_front_page()) : ?>
+        <!-- Show canvas animation on front-page -->
+        <header id="masthead" class="shadow-lg vh-100 site-header navbar-static-top <?php echo WP_Times_art_bg_class(); ?>" role="banner">
+            <div id="canvasWrapper" class="no-color">
+                <canvas id="art-background" width="getWidth()" height="getHeight()"></canvas>
+            </div>
+            <script src="<?php echo get_template_directory_uri(); ?>/inc/assets/js/acid-background.js"></script>
+    <?php else : ?>
+        <?php if (is_single() or is_page()) : ?>
+        <!-- Show background thumbnail on single-sites -->
+        <header id="masthead" class="shadow-lg site-header navbar-static-top header-thumbnail <?php echo WP_Times_art_bg_class(); ?>" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>');" role="banner">
+        <?php endif; ?>
+    <?php endif; ?>
     
         <div class="container">
             <nav class="navbar pl-md-5 py-0 navbar-expand-xl col-12 fixed-top" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement">
