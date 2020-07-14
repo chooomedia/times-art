@@ -19,7 +19,7 @@ body {
     font-family: sans-serif;
 }
 
-h1 > span {
+h1 > span, .site-info {
     font-family:'Times-art';
 }
 
