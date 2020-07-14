@@ -495,6 +495,7 @@ Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, 
   --------------------------------------------------------------*/
   .footer-adress {
     border-bottom: 2.5px solid rgba(255,255,255,.7);
+    text-transform: uppercase;
     padding: 10px 0;
     font-size: 1.3rem;
     font-family: 'Times-art';
@@ -505,13 +506,16 @@ Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, 
 
   #menu-social-media-menu {
     flex-direction:unset !important;
+    height: 51px;
+    top: 3px;
+    position: relative;
   }
   #menu-social-media-menu li {
-      width: 40px;
-      height: 40px;
-      line-height: 40px;
-      color: #fff;
-      border: unset;
+    width: 50px;
+    line-height: 46px;
+    color: #fff;
+    border: 2px solid #fff;
+    margin: 0 2rem 0 0;
   }
 
   #menu-social-media-menu li a {
@@ -589,9 +593,8 @@ ul#menu-footer-menu {
     color: #FFF;
     background-color: var(--primary);
     border: 2px solid #fff;
-    transform: translateY(-78%);
+    margin-top: 3.55rem;
     padding: .7rem 1rem;
-    margin: 0 auto 1.3rem auto;
     text-transform: uppercase;
     max-width: max-content;
     font-size: 1rem;
