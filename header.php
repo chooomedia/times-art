@@ -22,14 +22,18 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wp-times-art' ); ?></a>
-    <!-- Show art background on frontpage -->
-    <?php if (is_front_page() && !is_single()) : ?>
+<?php if(!is_page_template( 'blank-page.php' ) && !is_page_template( 'blank-page-with-container.php' )): ?>
+        <!-- Show art background on frontpage -->
+<?php if (is_front_page()) : ?>
     <header id="masthead" class="shadow-lg vh-100 site-header navbar-static-top <?php echo WP_Times_art_bg_class(); ?>" role="banner">
         <div id="canvasWrapper" class="no-color">
             <canvas id="art-background" width="getWidth()" height="getHeight()"></canvas>
         </div>
         <script src="<?php echo get_template_directory_uri(); ?>/inc/assets/js/acid-background.js"></script>
-     <? endif; ?>
+    <? else : ?>
+    <!-- Show background thumbnail on single-sites -->
+    <header id="masthead" class="shadow-lg site-header navbar-static-top header-thumbnail <?php echo WP_Times_art_bg_class(); ?>" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>'); background-position: center;" role="banner">
+<? endif; ?>
     
         <div class="container">
             <nav class="navbar pl-md-5 py-0 navbar-expand-xl col-12 fixed-top" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement">
@@ -61,10 +65,9 @@
                 ?>
             </nav>
 
-
             <div id="subheader">
                 <div class="container">
-                <?php if (is_front_page() && !is_single()) : ?>
+                <?php if (!is_single()) : ?>
                     <div class="vh-100 d-flex justify-center">
                         <div class="col-12 my-auto p-0">
                             <h1 class="mt-10 outline">
@@ -90,10 +93,10 @@
                 <?php endif; ?>
                 </div>
             </div>
-        </div>
-	</header><!-- #masthead -->
+        </div><!-- .container
+    </header><!-- #masthead -->
 
 	<div id="content" class="site-content">
 		<div class="container">
 			<div class="row">
-                <?php endif; ?>
+<?php endif; ?>
