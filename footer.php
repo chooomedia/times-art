@@ -16,7 +16,7 @@
 </div><!-- .container -->
 
 <footer id="colophon" class="site-footer <?php echo WP_Times_art_bg_class(); ?>" role="contentinfo">
-	<div class="container py-5">
+	<div class="container pt-4 pb-1">
 		<p class="footer-adress">
 			Times Art<br>
 			digital Design

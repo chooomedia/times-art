@@ -36,18 +36,7 @@ Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, 
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Normalize
---------------------------------------------------------------*/
-@font-face { 
-    font-family: "Times-art"; 
-    src: url("inc/assets/fonts/FirstFont.ttf"); 
-  }
-  
-  body {
-    font-family: 'Times-art';
-    margin: 0;
-    -webkit-font-smoothing: auto;
-  }
-  
+--------------------------------------------------------------*/  
   article,
   aside,
   details,
@@ -554,6 +543,7 @@ ul#menu-footer-menu {
     display: flex;
     margin: 0 auto;
     padding: unset;
+    line-height: 3rem;
   }
   
   ul#menu-footer-menu::before {
@@ -1435,7 +1425,7 @@ ul#menu-footer-menu {
     font-size: 1rem;
     position: absolute;
     right: 0;
-    top: 14px;
+    top: 24px;
   }
   .copyright {
     font-size: 0.875rem;

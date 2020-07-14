@@ -237,7 +237,6 @@ function WP_Times_art_scripts() {
         wp_enqueue_style( 'wp-times-art-bootstrap-css', get_template_directory_uri() . '/inc/assets/css/bootstrap.min.css' );
         wp_enqueue_style( 'wp-times-art-fontawesome-cdn', get_template_directory_uri() . '/inc/assets/css/fontawesome.min.css' );
     }
-    wp_enqueue_style( 'wp-times-art-hamburgers', get_template_directory_uri() . '/inc/assets/css/hamburgers.min.css' );
 	// load bootstrap css
 	// load AItheme styles
 	// load WP Bootstrap Starter styles
@@ -246,7 +245,7 @@ function WP_Times_art_scripts() {
         wp_enqueue_style( 'wp-times-art-'.get_theme_mod( 'theme_option_setting' ), get_template_directory_uri() . '/inc/assets/css/presets/theme-option/'.get_theme_mod( 'theme_option_setting' ).'.css', false, '' );
     }
     if(get_theme_mod( 'preset_style_setting' ) === 'times-art') {
-        wp_enqueue_style( 'wp-times-art-times-art-font', get_template_directory_uri() . '/inc/assets/css/fonts/times-art.css');
+        wp_enqueue_style( 'wp-times-art-times-art-font', get_template_directory_uri() . '/inc/assets/css/presets/typography/times-art.css');
     }
     if(get_theme_mod( 'preset_style_setting' ) === 'poppins-lora') {
         wp_enqueue_style( 'wp-times-art-poppins-lora-font', 'https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i|Poppins:300,400,500,600,700' );
@@ -303,24 +302,18 @@ function WP_Times_art_scripts() {
 	//	wp_enqueue_script( 'comment-reply' );
     // }
 
-    // Add mousemove & mousestop color functions
+    // add Mousemove & Mousestop Color functions
     wp_enqueue_script( 'color-at-move', get_template_directory_uri() . '/inc/assets/js/color-at-move.js', array(), '1.0.0', true );
     wp_enqueue_script( 'mousestop', get_template_directory_uri() . '/inc/assets/js/mousestop.js', array(), '1.0.0', true );
     
-    // Add Restyler Function for Headline
+    // add Restyler Function for Headline
     wp_enqueue_script( 'change-font', get_template_directory_uri() . '/inc/assets/js/change-font.js', array(), '1.0.0', true );
     
-    // Add show-animation on portfolio boxed on "hover"
+    // add Show-Animation on Portfolio Boxed on "hover"
     wp_enqueue_script( 'on-hover-actions', get_template_directory_uri() . '/inc/assets/js/on-hover-actions.js', array(), '1.0.0', true );
 
-    // Add scrolling animations to scroll-a and so on
+    // add Scrolling Animations to scroll-Arrow and so on
     wp_enqueue_script( 'scoll-animation', get_template_directory_uri() . '/inc/assets/js/scroll-animation.js', array(), '1.0.0', true );
-    
-    // Add mobile menu animation script
-    wp_enqueue_script( 'mobile-menu', get_template_directory_uri() . '/inc/assets/js/mobile-menu.js', array(), '1.0.0', true );
-    
-    // Add Fontawesome5 icons libary
-    wp_enqueue_script( 'fontawesome5', 'https://kit.fontawesome.com/a076d05399.js', array(), '5.0.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'WP_Times_art_scripts' );
 
