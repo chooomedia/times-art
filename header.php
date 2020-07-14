@@ -24,18 +24,7 @@
     <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wp-times-art' ); ?></a>
     <?php if(!is_page_template( 'blank-page.php' ) && !is_page_template( 'blank-page-with-container.php' )): ?>
     <!-- Show art background on frontpage -->
-    <?php if(is_front_page() && !is_single()) : ?>
-        <!-- Add video background if ACF variable video-Id avaiable -->
-        <?php if(get_field('video_link')) : ?>
-        <?php $videoID = get_field('video_link'); ?>
-            <header id="masthead" class="shadow-lg vh-100 site-header navbar-static-top <?php echo WP_Times_art_bg_class(); ?>" role="banner">
-            <div class="vimeo-wrapper">
-                <iframe src="https://player.vimeo.com/video/<?php echo $videoID ?>?background=1&autoplay=1&loop=1&byline=0&title=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-            </div>
-        <?php else: ?>
-            <header id="masthead" class="shadow-lg vh-100 site-header navbar-static-top <?php echo WP_Times_art_bg_class(); ?>" style="background: #000;" role="banner">
-        <? endif; ?>
-    <? endif; ?>
+    
     
     <!-- Show background thumbnail on single-sites -->
     <? if (!is_front_page() && is_page() || is_single()) : ?>
@@ -47,9 +36,9 @@
     <? endif; ?>
     
     <?php if(!is_search()) : ?>
-    <div class="container-fluid">
+        <div class="container-fluid">
     <?php else: ?>
-    <div class="container p-0 mt-5">
+        <div class="container p-0 mt-5">
     <?php endif; ?>
 
         <div class="fixed-top container px-3 px-md-0">
