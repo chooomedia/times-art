@@ -604,11 +604,8 @@ ul#menu-footer-menu {
     background-color: var(--primary);
     border: 2px solid #fff;
     padding: .7rem 1rem;
-    margin: 0 auto 1.3rem auto;
     text-transform: uppercase;
     max-width: max-content;
-    font-size: 1rem;
-    font-weight: bolder;
     border-radius: unset;
   }
   
