@@ -58,6 +58,7 @@ get_header(); ?>
 				'posts_per_page' => - 1,
 			);
 			$q    = new WP_Query( $args );
+			$n = 0;
 		?>
 
 		<section id="portfolio-container" class="row">
