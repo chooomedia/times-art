@@ -22,7 +22,6 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wp-times-art' ); ?></a>
-    <?php if(!is_page_template( 'blank-page.php' ) && !is_page_template( 'blank-page-with-container.php' )): ?>
     <!-- Show art background on frontpage -->
     <?php if (is_front_page() && !is_single()) : ?>
     <header id="masthead" class="shadow-lg vh-100 site-header navbar-static-top <?php echo WP_Times_art_bg_class(); ?>" role="banner">
@@ -30,10 +29,7 @@
             <canvas id="art-background" width="getWidth()" height="getHeight()"></canvas>
         </div>
         <script src="<?php echo get_template_directory_uri(); ?>/inc/assets/js/acid-background.js"></script>
-    <? endif; ?>
-
-    <!-- Show background thumbnail on single-sites -->
-    <? if (!is_front_page() && is_page() || is_single()) : ?>
+    <? else : ?>
     <header id="masthead" class="shadow-lg site-header navbar-static-top header-thumbnail <?php echo WP_Times_art_bg_class(); ?>" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>'); background-position: center;" role="banner">
     <? endif; ?>
     
