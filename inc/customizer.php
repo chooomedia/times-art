@@ -41,28 +41,10 @@ function WP_Times_art_customize_register( $wp_customize ) {
         'type'    => 'select',
         'choices' => array(
             'default' => 'Default',
-            'groovymovie' => 'Groovy movie' ,
-            'cerulean' => 'Cerulean',
-            'cosmo' => 'Cosmo',
-            'cyborg' => 'Cyborg',
-            'darkly' => 'Darkly',
-            'flatly' => 'Flatly',
-            'journal' => 'Journal',
-            'litera' => 'Litera',
-            'lumen' => 'Lumen',
-            'lux' => 'Lux',
-            'materia' => 'Materia',
-            'minty' => 'Minty',
-            'pulse' => 'Pulse',
-            'sandstone' => 'Sandstone',
-            'simplex' => 'Simplex',
-            'sketchy' => 'Sketchy',
-            'slate' => 'Slate',
-            'solar' => 'Solar',
-            'spacelab' => 'Spacelab',
-            'superhero' => 'Superhero',
-            'united' => 'United',
-            'yeti' => 'Yeti',
+            'times-art' => 'Times Art',
+            'groovymovie' => 'Groovy Movie',
+            'provectus' => 'Provectus',
+            'cyborg' => 'Cyborg'
         )
     ) ) );
 

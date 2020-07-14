@@ -489,8 +489,7 @@ header#posthead {
 }
 
 #subheader h1 {
-  /*color: #FFF; */
-  font-size: 8vw;
+  font-size: 12vw;
   letter-spacing: 2rem;
 }
 
@@ -729,15 +728,12 @@ input.contact-form, textarea.contact-form {
 }
 
 li.current_page_item {
-  border-bottom: 2.5px solid rgba(0, 0, 0, 0.95);
+  border-bottom: 2.5px solid rgba(0,0,0,.95);
 }
 
-body:not(.theme-preset-active) #masthead .navbar-nav > li > a:hover,
-body:not(.theme-preset-active) #masthead .navbar-nav > li.current_page_item > a {
-  color: rgba(0, 0, 0, 0.95);
-  letter-spacing: 2px;
-  font-size: .9rem;
-  font-weight: bold;
+li.menu-item {
+  border-bottom: 3px solid rgba(0,0,0,.5);
+  margin: .7rem 1rem .3rem;
 }
 
 .navbar-brand {
