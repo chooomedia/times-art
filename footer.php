@@ -27,9 +27,7 @@
 		<div class="container py-0 px-0">
 			<?php get_template_part( 'footer-underline-menu' ); ?>
 		</div>
-		<div class="site-info">
-			&copy; <?php echo date('Y'); ?> <?php echo '<a href="'.home_url().'">'.get_bloginfo('name').'</a>'; ?>
-		</div><!-- close .site-info -->
+
 </footer><!-- #colophon -->
 <?php endif; ?>
 </div><!-- #page -->

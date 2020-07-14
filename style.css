@@ -504,25 +504,37 @@ Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, 
   /*--------------------------------------------------------------
   ## Menus
   --------------------------------------------------------------*/
+  .footer-adress {
+    border-bottom: 2.5px solid rgba(255,255,255,.7);
+    padding: 10px 0;
+    font-size: 1.3rem;
+    font-family: 'Times-art';
+  }
+  #menu-main-menu {
+    font-family: sans-serif
+  }
+
+  #menu-social-media-menu {
+    flex-direction:unset !important;
+  }
   #menu-social-media-menu li {
       width: 40px;
       height: 40px;
       line-height: 40px;
       color: #fff;
-      margin: 0 auto;
       border: unset;
   }
 
-    #menu-social-media-menu li a {
-      padding: 0;
-      margin: 0 auto;
-      text-align: center;
-      background: transparent;
-      font-size: 1.1rem;
-  }
+  #menu-social-media-menu li a {
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+    background: transparent;
+    font-size: 1.1rem;
+}
 
   #masthead nav {
-    max-height: 48.87px;
+    max-height: 58.87px;
     padding-left: 0;
     padding-right: 0;
     text-transform: uppercase;
@@ -538,41 +550,25 @@ Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, 
   }
   
 ul#menu-footer-menu {
+    font-size: 1rem;
     display: flex;
-    padding: .3rem 0 .5rem;
     margin: 0 auto;
-    justify-content: center;
+    padding: unset;
   }
   
   ul#menu-footer-menu::before {
     content: "";
     position: absolute;
-    width: 50vw;
+    width: 100%;
     height: 30px;
     border-top: 2.5px solid rgba(255,255,255,.7);
   }
   
-  ul#menu-footer-menu::after {
-    content: "";
-    position: absolute;
-    width: 32px;
-    height: 30px;
-    padding: 0;
-    margin-top: -14px;
-    background-image: url("data:image/svg+xml,%3Csvg style='transition:all .3s;' itemprop='logo' title='R Force' xmlns='http://www.w3.org/2000/svg' version='1.0' viewBox='0 0 904.195313 724.953925' preserveAspectRatio='xMidYMid meet' height='30px' width='32px'%3E%3Cg transform='translate(-0.895652,725.578456) scale(0.100000,-0.100000)' fill='%23fff' stroke='none'%3E%3Cpath d='M3965 7250 c-1914 -4 -3514 -10 -3555 -15 -55 -5 -85 -14 -112 -32 -54 -37 -212 -203 -252 -266 l-35 -55 -2 -3204 c-1 -1761 2 -3221 6 -3243 16 -88 116 -206 260 -309 44 -31 92 -66 107 -78 23 -18 49 -23 150 -32 80 -6 1515 -10 4088 -10 3624 0 3968 1 4002 16 56 25 187 116 245 171 35 33 59 66 72 101 10 28 39 97 64 154 l46 102 2 3008 c1 3148 0 3220 -41 3272 -11 14 -44 62 -75 106 -81 119 -216 254 -290 290 l-60 29 -570 1 c-313 0 -2136 -3 -4050 -6z m4525 -144 c108 -36 176 -83 251 -173 50 -59 72 -101 110 -208 l29 -84 -2 -3013 -3 -3013 -33 -65 c-40 -78 -54 -90 -108 -90 -210 0 -569 139 -834 323 -165 115 -393 323 -604 552 -60 66 -232 251 -381 410 -150 160 -328 351 -396 426 -68 75 -187 203 -264 286 -77 82 -189 203 -250 269 -214 233 -481 520 -587 631 -123 128 -148 164 -148 214 0 46 14 58 120 99 268 105 615 321 840 525 249 225 442 507 533 782 50 151 67 271 67 485 0 315 -38 482 -170 754 -159 325 -443 601 -808 785 -40 20 -79 42 -87 49 -23 19 -19 59 8 70 13 5 555 8 1342 7 1254 -2 1323 -3 1375 -21z m-8135 -431 c175 -51 269 -117 324 -227 l31 -61 0 -2636 c0 -1450 -5 -2690 -9 -2757 -5 -66 -16 -136 -24 -155 -38 -91 -189 -208 -344 -268 -107 -41 -124 -40 -176 8 l-42 39 -7 1409 c-4 774 -4 2126 0 3003 7 1480 9 1597 25 1620 39 57 92 62 222 25z m3273 -28 c309 -41 638 -122 872 -214 239 -94 410 -197 555 -335 141 -133 227 -264 296 -453 l33 -90 1 -280 0 -280 -33 -95 c-65 -189 -197 -387 -324 -488 -246 -195 -571 -333 -895 -377 -60 -9 -164 -25 -233 -38 -121 -21 -144 -22 -810 -22 -683 0 -685 0 -755 22 -38 13 -81 32 -95 42 l-25 20 -3 1206 c-2 828 1 1219 8 1246 18 67 98 141 174 160 17 4 256 7 531 5 479 -2 509 -3 703 -29z m-231 -3428 c242 -14 366 -33 417 -63 77 -46 170 -147 1081 -1171 88 -99 291 -326 450 -505 687 -773 830 -916 1161 -1161 105 -78 117 -103 67 -136 -26 -17 -104 -18 -1433 -18 -1231 0 -1408 2 -1431 15 -14 8 -50 44 -80 79 -30 35 -75 78 -100 96 -75 51 -265 113 -401 130 -153 18 -450 79 -558 114 -121 39 -219 99 -280 172 -27 33 -55 70 -62 82 -10 17 -13 269 -16 1137 -4 1236 -8 1171 60 1206 24 13 69 19 168 24 226 11 769 11 957 -1z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E"); 
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: var(--primary);
-    outline: 6px solid var(--primary);
-  }
-  
   #menu-footer-menu li.menu-item {
-    text-transform: uppercase;
     color: #fff;
-    letter-spacing: 1.5px;
     border: unset;
     list-style-type: none;
-    margin: 3rem 1rem 1.3rem 1rem;
+    margin: 10px 10px 10px 0;
   }
   
   #menu-social-menu {
@@ -1094,10 +1090,10 @@ ul#menu-footer-menu {
   # Widgets
   --------------------------------------------------------------*/
   .widget {
-    margin: 0 0 1.5em;
-    font-size: 0.875rem;
+    margin: 0 0 1rem;
     /* Make sure select elements fit in widgets. */
   }
+
   .widget select {
     max-width: 100%;
   }
@@ -1427,16 +1423,19 @@ ul#menu-footer-menu {
   # Footer
   --------------------------------------------------------------*/
   footer#colophon {
-    font-size: 85%;
     background: var(--primary);
     color: #fff;
+    font-family: sans-serif;
   }
   body:not(.theme-preset-active) footer#colophon {
     color: #99979c;
     font-family: sans-serif;
   }
   .site-info {
-    font-size: .7rem;
+    font-size: 1rem;
+    position: absolute;
+    right: 0;
+    top: 14px;
   }
   .copyright {
     font-size: 0.875rem;
