@@ -146,6 +146,52 @@ function WP_Times_art_widgets_init() {
         'before_title'  => '',
         'after_title'   => '',
     ) );
+    register_sidebar( array(
+        'name'          => esc_html__( 'Footer 1', 'wp-times-art' ),
+        'id'            => 'footer-1',
+        'description'   => esc_html__( 'Add widgets here.', 'wp-times-art' ),
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<p class="widget-title">',
+        'after_title'   => '</p>',
+    ) );
+    register_sidebar( array(
+        'name'          => esc_html__( 'Footer 2', 'wp-times-art' ),
+        'id'            => 'footer-2',
+        'description'   => esc_html__( 'Add widgets here.', 'wp-times-art' ),
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<p class="widget-title">',
+        'after_title'   => '</p>',
+    ) );
+    register_sidebar( array(
+        'name'          => esc_html__( 'Footer 3', 'wp-times-art' ),
+        'id'            => 'footer-3',
+        'description'   => esc_html__( 'Add widgets here.', 'wp-times-art' ),
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<p class="widget-title">',
+        'after_title'   => '</p>',
+    ) );
+    register_sidebar( array(
+        'name'          => esc_html__( 'Footer 4', 'wp-times-art' ),
+        'id'            => 'footer-4',
+        'description'   => esc_html__( 'Add widgets here.', 'wp-times-art' ),
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<p class="widget-title">',
+        'after_title'   => '</p>',
+    ) );
+
+    register_sidebar( array(
+        'name'          => esc_html__( 'Footer underline Menu', 'wp-times-art' ),
+        'id'            => 'footer-underline-menu',
+        'description'   => esc_html__( 'Add widgets here.', 'wp-times-art' ),
+        'before_widget' => '',
+        'after_widget'  => '',
+        'before_title'  => '',
+        'after_title'   => '',
+    ) );
 }
 add_action( 'widgets_init', 'WP_Times_art_widgets_init' );
 

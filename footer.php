@@ -10,42 +10,38 @@
  */
 
 ?>
+
 <?php if(!is_page_template( 'blank-page.php' ) && !is_page_template( 'blank-page-with-container.php' )): ?>
-					</div><!-- .row -->
-				</div><!-- .container -->
-			</div><!-- #content -->
+</div><!-- .row -->
+</div><!-- .container -->
 
-			<footer id="colophon" class="site-footer <?php echo WP_Times_art_bg_class(); ?>" role="contentinfo">
-				<div class="container pt-3 pb-3">
+<footer id="colophon" class="site-footer <?php echo WP_Times_art_bg_class(); ?>" role="contentinfo">
+	<div class="container py-5">
+		<p class="footer-adress">
+			Times Art<br>
+			digital Design
+		</p>
+		<div class="container px-0 py-0 pt-md-0">
+			<?php get_template_part( 'footer-widget' ); ?>
+		</div>
+		<div class="container py-0 px-0">
+			<?php get_template_part( 'footer-underline-menu' ); ?>
+		</div>
+		<div class="site-info">
+			&copy; <?php echo date('Y'); ?> <?php echo '<a href="'.home_url().'">'.get_bloginfo('name').'</a>'; ?>
+		</div><!-- close .site-info -->
+</footer><!-- #colophon -->
+<?php endif; ?>
+</div><!-- #page -->
 
-					<div class="text-center">
-						<div class="container">
-						<div class="footer-cta col-4">
-							<a title="Contact" href="/contact/">Contact</a>
-						</div>
-							<nav class="social-nav">
-								<?php get_template_part( 'social-widget' ); ?>
-							</nav>
-							<nav class="footer-nav mt-3">
-								<?php get_template_part( 'footer-widget' ); ?>
-							</nav>
-						</div>
-					</div>
-				</div>
-				<div class="site-info">
-					&copy; <?php echo date('Y'); ?> <?php echo '<a href="'.home_url().'">'.get_bloginfo('name').'</a>'; ?> 
-				</div><!-- close .site-info -->
-			</footer><!-- #colophon -->
-		<?php endif; ?>
-		</div><!-- #page -->
+<?php if(!is_singular('post') && is_page() ) : ?>
+<script src="./wp-content/themes/times-art/inc/assets/js/mixitup.min.js"></script>
+<script>
+	var mixer = mixitup('#portfolio-container');
+</script>
+<?php endif; ?>
 
-		<?php if(!is_singular('post') && is_page() ) : ?>
-		<script src="./wp-content/themes/times-art/inc/assets/js/mixitup.min.js"></script>
-		<script>
-			var mixer = mixitup('#portfolio-container');
-		</script>
-		<?php endif; ?>
+<?php wp_footer(); ?>
+</body>
 
-	<?php wp_footer(); ?>
-	</body>
 </html>

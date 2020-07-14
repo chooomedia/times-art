@@ -29,11 +29,7 @@
             <canvas id="art-background" width="getWidth()" height="getHeight()"></canvas>
         </div>
         <script src="<?php echo get_template_directory_uri(); ?>/inc/assets/js/acid-background.js"></script>
-    <? else : ?>
-
-    <!-- Show background thumbnail on single-sites -->
-    <header id="masthead" class="shadow-lg site-header navbar-static-top header-thumbnail <?php echo WP_Times_art_bg_class(); ?>" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>'); background-position: center;" role="banner">
-    <? endif; ?>
+     <? endif; ?>
     
         <div class="container">
             <nav class="navbar pl-md-5 py-0 navbar-expand-xl col-12 fixed-top" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement">
