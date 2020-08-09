@@ -1,6 +1,7 @@
 jQuery(function ($) {
     let fadeStart = 100, fadeUntil = 500, fading = $('.page-scroller'),
         mastHead = $("#masthead nav"),
+        navBar = $(".navbar"),
         postHead = $("#posthead"),
         addSticky = $(".add-sticky"),
         entryTitle = $(".entry-title");
@@ -18,6 +19,12 @@ jQuery(function ($) {
             mastHead.css("background", "#FFF");
         }
 
+        if (offset > 400) {
+            mastHead.css("background", "#FFF");
+        } else {
+            navBar.css("background", "#FFF");
+        }
+
         if (offset >= 470) {
             postHead.addClass("top-3");
             addSticky.addClass("top-9");
@@ -30,6 +37,4 @@ jQuery(function ($) {
 
         fading.css('opacity', opacity);
     });
-
-
 });

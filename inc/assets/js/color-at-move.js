@@ -2,9 +2,7 @@ jQuery(function($) {
     let portfolioBox = $(".post-img");
     let headerThumb = $(".header-thumbnail");
     let blockImg = $(".wp-block-image img");
-
     let page = $("#page");
-
     let isMousemove = false;
 
     page.on("mousemove", function (event) {
@@ -17,7 +15,6 @@ jQuery(function($) {
             iframe.addClass("no-color");
         }     
         portfolioBox.addClass("no-color");
-        headerThumb.addClass("no-color");
         blockImg.addClass("no-color");
     });
 
@@ -28,7 +25,6 @@ jQuery(function($) {
                 iframe.removeClass("no-color");
             } 
             portfolioBox.removeClass("no-color");
-            headerThumb.removeClass("no-color");
             blockImg.removeClass("no-color");
         }
     });

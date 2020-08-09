@@ -129,6 +129,15 @@ function WP_Times_art_widgets_init() {
         'after_title'   => '</h3>',
     ) );
     register_sidebar( array(
+        'name'          => esc_html__( 'Social Widget', 'wp-times-art' ),
+        'id'            => 'social-widget',
+        'description'   => esc_html__( 'Add widgets here.', 'wp-times-art' ),
+        'before_widget' => '<div class="container">',
+        'after_widget'  => '</div>',
+        'before_title'  => '',
+        'after_title'   => '',
+    ) );
+    register_sidebar( array(
         'name'          => esc_html__( 'Footer Widget', 'wp-times-art' ),
         'id'            => 'footer-widget',
         'description'   => esc_html__( 'Add widgets here.', 'wp-times-art' ),
@@ -182,7 +191,6 @@ function WP_Times_art_scripts() {
         wp_enqueue_style( 'wp-times-art-bootstrap-css', get_template_directory_uri() . '/inc/assets/css/bootstrap.min.css' );
         wp_enqueue_style( 'wp-times-art-fontawesome-cdn', get_template_directory_uri() . '/inc/assets/css/fontawesome.min.css' );
     }
-    
     wp_enqueue_style( 'wp-times-art-hamburgers', get_template_directory_uri() . '/inc/assets/css/hamburgers.min.css' );
 	// load bootstrap css
 	// load AItheme styles
@@ -249,18 +257,24 @@ function WP_Times_art_scripts() {
 	//	wp_enqueue_script( 'comment-reply' );
     // }
 
-    // add Mousemove & Mousestop Color functions
+    // Add mousemove & mousestop color functions
     wp_enqueue_script( 'color-at-move', get_template_directory_uri() . '/inc/assets/js/color-at-move.js', array(), '1.0.0', true );
     wp_enqueue_script( 'mousestop', get_template_directory_uri() . '/inc/assets/js/mousestop.js', array(), '1.0.0', true );
     
-    // add Restyler Function for Headline
+    // Add Restyler Function for Headline
     wp_enqueue_script( 'change-font', get_template_directory_uri() . '/inc/assets/js/change-font.js', array(), '1.0.0', true );
     
-    // add Show-Animation on Portfolio Boxed on "hover"
+    // Add show-animation on portfolio boxed on "hover"
     wp_enqueue_script( 'on-hover-actions', get_template_directory_uri() . '/inc/assets/js/on-hover-actions.js', array(), '1.0.0', true );
 
-    // add Scrolling Animations to scroll-Arrow and so on
+    // Add scrolling animations to scroll-a and so on
     wp_enqueue_script( 'scoll-animation', get_template_directory_uri() . '/inc/assets/js/scroll-animation.js', array(), '1.0.0', true );
+    
+    // Add mobile menu animation script
+    wp_enqueue_script( 'mobile-menu', get_template_directory_uri() . '/inc/assets/js/mobile-menu.js', array(), '1.0.0', true );
+    
+    // Add Fontawesome5 icons libary
+    wp_enqueue_script( 'fontawesome5', 'https://kit.fontawesome.com/a076d05399.js', array(), '5.0.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'WP_Times_art_scripts' );
 
