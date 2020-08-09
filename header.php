@@ -46,10 +46,10 @@
             <? endif; ?>
         <? endif; ?>
         
-            <div class="container p-0 m-0">
-                <div class="fixed-top container">
+            <div class="container">
+                <div class="fixed-top container px-3 px-md-0">
                     <nav class="navbar py-0 px-md-2 navbar-expand-xl" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement">
-                        <div class="navbar-brand" itemprop itemtype="https://schema.org/Brand">
+                        <div class="navbar-brand pl-2 pl-md-0" itemprop itemtype="https://schema.org/Brand">
                             <?php if ( get_theme_mod( 'WP_Times_art_logo' ) ): ?>
                                 <a href="<?php echo esc_url( home_url( '/' )); ?>">
                                     <svg style="transition:all .3s;" itemprop="logo" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" xmlns="http://www.w3.org/2000/svg" version="1.0" viewBox="0 0 904.195313 724.953925" preserveAspectRatio="xMidYMid meet" height="42px" width="60px">
@@ -63,7 +63,7 @@
 
                         </div>
 
-                        <button class="d-flex justify-content-center d-lg-none hamburger hamburger--collapse" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="" aria-expanded="false" aria-label="Toggle navigation">
+                        <button class="d-flex justify-content-center d-lg-none hamburger hamburger--collapse" type="button" aria-controls="" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="hamburger-box">
                                 <span class="hamburger-inner"></span>
                             </span>
@@ -85,7 +85,9 @@
                                         return attr == "#363f59" ? "#fff" : "#363f59" ;
                                     });
                                     $("#menu-mainmenu").toggleClass("is-active", "");
-                                    mainmenuUl.css("display", "flex");
+                                    mainNav.css('display', function(index, attr){
+                                        return attr == "flex" ? "none" : "flex" ;
+                                    });
                                 })
 
                                 mainmenuUlLinkEl.on("click", function() {
@@ -94,7 +96,7 @@
                                     $(".site-title").removeClass("is-active");
                                     $("svg g").attr("fill", "#363f59");
                                     $("#menu-mainmenu").toggleClass("is-active");
-                                    mainmenuUl.css("display", "none");
+                                    mainNav.css("display", "none");
                                 });
                             })
                         </script>
@@ -115,12 +117,12 @@
                     </nav>
                 </div>
 
-                <div id="subheader" class="w-100">
-                    <div class="container vw-100 mx-auto p-0">
+                <div id="subheader">
+                    <div class="row">
                     <?php if (is_front_page() && !is_single()) : ?>
-                        <div class="vh-100 d-flex justify-center">
+                        <div class="vh-100 mx-auto d-flex justify-center">
                             <div class="col-12 my-auto p-0">
-                                <h1 class="mt-10 outline">
+                                <h1 class="mt-10 outline text-center">
                                     <?php
                                     if(get_theme_mod( 'header_banner_title_setting' )){
                                         echo get_theme_mod( 'header_banner_title_setting' );

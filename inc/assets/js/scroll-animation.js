@@ -18,6 +18,10 @@ jQuery(function ($) {
             mastHead.css("background", "#FFF");
         }
 
+        if (offset > 400) {
+            mastHead.css("background", "#FFF");
+        }
+
         if (offset >= 470) {
             postHead.addClass("top-3");
             addSticky.addClass("top-9");

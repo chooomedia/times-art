@@ -2,7 +2,6 @@ jQuery(function($) {
     let portfolioBox = $(".post-img");
     let headerThumb = $(".header-thumbnail");
     let blockImg = $(".wp-block-image img");
-
     let page = $("#page");
 
     let isMousemove = false;
