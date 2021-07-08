@@ -21,18 +21,31 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wp-bootstrap-starter' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wp-times-art' ); ?></a>
     <?php if(!is_page_template( 'blank-page.php' ) && !is_page_template( 'blank-page-with-container.php' )): ?>
-	<header id="masthead" class="site-header navbar-static-top <?php echo WP_Times_art_bg_class(); ?>" role="banner">
+    
+    <?php if(is_front_page()) : ?>
+        <!-- Show canvas animation on front-page -->
+        <header id="masthead" class="shadow-lg vh-100 site-header navbar-static-top <?php echo WP_Times_art_bg_class(); ?>" role="banner">
+            <div id="canvasWrapper" class="no-color">
+                <canvas id="art-background" width="getWidth()" height="getHeight()"></canvas>
+            </div>
+            <script src="<?php echo get_template_directory_uri(); ?>/inc/assets/js/acid-background.js"></script>
+    <?php else : ?>
+        <?php if (is_single() or is_page()) : ?>
+        <!-- Show background thumbnail on single-sites -->
+        <header id="masthead" class="shadow-lg site-header navbar-static-top header-thumbnail <?php echo WP_Times_art_bg_class(); ?>" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>');" role="banner">
+        <?php endif; ?>
+    <?php endif; ?>
+    
         <div class="container">
-            <nav class="navbar navbar-expand-xl p-0">
-                <div class="navbar-brand">
+            <nav class="navbar pl-md-5 py-0 navbar-expand-xl col-12 fixed-top" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement">
+                <div class="navbar-brand" itemprop itemtype="https://schema.org/Brand">
                     <?php if ( get_theme_mod( 'WP_Times_art_logo' ) ): ?>
                         <a href="<?php echo esc_url( home_url( '/' )); ?>">
-                            <img src="<?php echo esc_url(get_theme_mod( 'WP_Times_art_logo' )); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
+                            <img itemprop="logo" src="<?php echo esc_url(get_theme_mod( 'WP_Times_art_logo' )); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
+                            <a itemprop="name" class="site-title" href="<?php echo esc_url( home_url( '/' )); ?>"><?php esc_url(bloginfo('name')); ?></a>
                         </a>
-                    <?php else : ?>
-                        <a class="site-title" href="<?php echo esc_url( home_url( '/' )); ?>"><?php esc_url(bloginfo('name')); ?></a>
                     <?php endif; ?>
 
                 </div>
@@ -53,35 +66,40 @@
                 'walker'          => new wp_bootstrap_navwalker()
                 ));
                 ?>
-
             </nav>
-        </div>
-	</header><!-- #masthead -->
-    <?php if(is_front_page() && !get_theme_mod( 'header_banner_visibility' )): ?>
-        <div id="page-sub-header" <?php if(has_header_image()) { ?>style="background-image: url('<?php header_image(); ?>');" <?php } ?>>
-            <div class="container">
-                <h1>
-                    <?php
-                    if(get_theme_mod( 'header_banner_title_setting' )){
-                        echo get_theme_mod( 'header_banner_title_setting' );
-                    }else{
-                        echo 'WordPress + Bootstrap';
-                    }
-                    ?>
-                </h1>
-                <p>
-                    <?php
-                    if(get_theme_mod( 'header_banner_tagline_setting' )){
-                        echo get_theme_mod( 'header_banner_tagline_setting' );
-                }else{
-                        echo esc_html__('To customize the contents of this header banner and other elements of your site, go to Dashboard > Appearance > Customize','wp-bootstrap-starter');
-                    }
-                    ?>
-                </p>
-                <a href="#content" class="page-scroller"><i class="fa fa-fw fa-angle-down"></i></a>
+
+
+            <div id="subheader">
+                <div class="container">
+                <?php if (is_front_page() && !is_single()) : ?>
+                    <div class="vh-100 d-flex justify-center">
+                        <div class="col-12 my-auto p-0">
+                            <h1 class="mt-10 outline">
+                                <?php
+                                if(get_theme_mod( 'header_banner_title_setting' )){
+                                    echo get_theme_mod( 'header_banner_title_setting' );
+                                }else{
+                                    echo 'CHOOOMEDIA + Wordpress';
+                                }
+                                ?>
+                            </h1>
+                            <p>
+                                <?php
+                                if(get_theme_mod( 'header_banner_tagline_setting' )){
+                                    echo get_theme_mod( 'header_banner_tagline_setting' );
+                                }
+                                ?>
+                            </p>
+                            
+                                <a href="#content" class="page-scroller"><i class="fa fa-2x fa-angle-down"></i></a>
+                        </div>
+                    </div>
+                <?php endif; ?>
+                </div>
             </div>
         </div>
-    <?php endif; ?>
+	</header><!-- #masthead -->
+
 	<div id="content" class="site-content">
 		<div class="container">
 			<div class="row">

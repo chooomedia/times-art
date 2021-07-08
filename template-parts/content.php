@@ -15,7 +15,7 @@
 	</div>
 	<header class="entry-header">
 		<?php
-		if ( is_single() ) :
+		if ( is_single() && ! is_front_page() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
 		else :
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
@@ -33,11 +33,11 @@
         if ( is_single() ) :
 			the_content();
         else :
-            the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'wp-bootstrap-starter' ) );
+            the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'wp-times-art' ) );
         endif;
 
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wp-bootstrap-starter' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wp-times-art' ),
 				'after'  => '</div>',
 			) );
 		?>

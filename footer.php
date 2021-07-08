@@ -10,24 +10,36 @@
  */
 
 ?>
-<?php if(!is_page_template( 'blank-page.php' ) && !is_page_template( 'blank-page-with-container.php' )): ?>
-			</div><!-- .row -->
-		</div><!-- .container -->
-	</div><!-- #content -->
-    <?php get_template_part( 'footer-widget' ); ?>
-	<footer id="colophon" class="site-footer <?php echo WP_Times_art_bg_class(); ?>" role="contentinfo">
-		<div class="container pt-3 pb-3">
-            <div class="site-info">
-                &copy; <?php echo date('Y'); ?> <?php echo '<a href="'.home_url().'">'.get_bloginfo('name').'</a>'; ?>
-                <span class="sep"> | </span>
-                <a class="credits" href="https://afterimagedesigns.com/wp-bootstrap-starter/" target="_blank" title="WordPress Technical Support" alt="Bootstrap WordPress Theme"><?php echo esc_html__('Bootstrap WordPress Theme','wp-bootstrap-starter'); ?></a>
 
-            </div><!-- close .site-info -->
+<?php if(!is_page_template( 'blank-page.php' ) && !is_page_template( 'blank-page-with-container.php' )): ?>
+</div><!-- .row -->
+</div><!-- .container -->
+
+<footer id="colophon" class="site-footer <?php echo WP_Times_art_bg_class(); ?>" role="contentinfo">
+	<div class="container pt-4 pb-1">
+		<p class="footer-adress">
+			Times Art<br>
+			digital Design
+		</p>
+		<div class="container px-0 py-0 pt-md-0">
+			<?php get_template_part( 'footer-widget' ); ?>
 		</div>
-	</footer><!-- #colophon -->
+		<div class="container py-0 px-0">
+			<?php get_template_part( 'footer-underline-menu' ); ?>
+		</div>
+
+</footer><!-- #colophon -->
 <?php endif; ?>
 </div><!-- #page -->
 
+<?php if(!is_singular('post') && is_page() ) : ?>
+<script src="./wp-content/themes/times-art/inc/assets/js/mixitup.min.js"></script>
+<script>
+	var mixer = mixitup('#portfolio-container');
+</script>
+<?php endif; ?>
+
 <?php wp_footer(); ?>
 </body>
+
 </html>

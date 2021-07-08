@@ -159,7 +159,7 @@ a {
 }
 
 a:hover {
-  color: #0056b3;
+  color: #000; /* #0056b3 */
   text-decoration: underline;
 }
 
@@ -8041,6 +8041,11 @@ button.bg-dark:focus {
 .mt-5,
 .my-5 {
   margin-top: 3rem !important;
+}
+
+.mt-10,
+.mb-10 {
+  margin-top: 10rem !important;
 }
 
 .mr-5,

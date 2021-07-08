@@ -14,7 +14,7 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area col-sm-12 col-lg-8">
+	<section id="primary" class="content-area container">
 		<main id="main" class="site-main" role="main">
 
 			<?php
@@ -30,9 +30,60 @@ get_header(); ?>
 			endwhile; // End of the loop.
 			?>
 
+		<!-- Loop the Posts if Front-Page -->
+		<?php if(is_front_page()) : ?>
+		<nav class="col-12 p-md-0 m-0" aria-label="Categories List">
+			<ul class="col-md-7 col-10 categories">
+				<li class="cat-item">
+					<a data-filter="all">All</a>
+				</li>
+				<li class="cat-item">
+					<a data-filter=".Photography">Photography</a>
+				</li>
+				<li class="cat-item">
+					<a data-filter=".Design">Design</a>
+				</li>
+				<li class="cat-item">
+					<a data-filter=".Movie">Movie</a>
+				</li>
+				<li class="cat-item">
+					<a data-filter=".Art">Art</a>
+				</li>
+			</ul>
+		</nav>
+
+		<?php
+			$args = array(
+				'post_type'      => 'post',
+				'posts_per_page' => - 1,
+			);
+			$q    = new WP_Query( $args );
+			$n = 0;
+		?>
+
+		<section id="portfolio-container" class="row">
+			<?php while ( $q->have_posts()) : $q->the_post(); ?>
+			<?php if (has_post_thumbnail( $post->ID )) : ?>
+			<?php $n++ ?>
+            <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); endif ?>
+				
+				<a data-order="<?php echo $n ?>" class="col-md-3 px-md-4 post-box mix <?php sps_category() ?>" href="<?php the_permalink(); ?>">
+					<figure role="group" class="post-img shadow no-color" style="background-image: url('<?php the_post_thumbnail_url(); ?>');">
+						<figcaption class="post-img-p">
+							<?php echo get_the_excerpt(); ?>
+						</figcaption>
+					</figure>
+					<figcaption>
+						<h3><?php the_title(); ?></h3>
+					</figcaption>
+				</a>
+			<?php endwhile; ?>
+		</section>
+
+		<?php endif; ?>
+
 		</main><!-- #main -->
 	</section><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();
